@@ -17886,7 +17886,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="VALUE" x="134.366" y="6.096" size="1.778" layer="96"/>
 </instance>
 <instance part="+3V6" gate="G$1" x="10.16" y="119.38" smashed="yes">
-<attribute name="VALUE" x="7.366" y="120.396" size="1.778" layer="96"/>
+<attribute name="VALUE" x="7.62" y="120.396" size="1.778" layer="96"/>
 </instance>
 <instance part="+3V7" gate="G$1" x="10.16" y="48.26" smashed="yes">
 <attribute name="VALUE" x="7.366" y="49.276" size="1.778" layer="96"/>
@@ -18683,7 +18683,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="53.34" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="POW4" class="0">
+<net name="PWR_SERVO" class="0">
 <segment>
 <pinref part="J7" gate="A" pin="1"/>
 <wire x1="-73.66" y1="-53.34" x2="-96.52" y2="-53.34" width="0.1524" layer="91"/>
