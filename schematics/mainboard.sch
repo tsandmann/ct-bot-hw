@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.3">
+<eagle version="8.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -39933,7 +39933,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="J6" library="pinhead_ts" deviceset="PINHD-1X6" device="" value="Erw_ENA"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="SUPPLY22" library="supply2_ts" deviceset="+5V" device="" value="+5V"/>
-<part name="J7" library="pinhead_ts" deviceset="PINHD-1X6" device="" value="I2C_0"/>
+<part name="J7" library="pinhead_ts" deviceset="PINHD-1X6" device="" value="I2C_2"/>
 <part name="SUPPLY26" library="supply2_ts" deviceset="+5V" device="" value="+5V"/>
 <part name="GND45" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J8" library="pinhead_ts" deviceset="PINHD-1X4" device="" value="I2C_Display"/>
@@ -39944,7 +39944,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J11" library="pinhead_ts" deviceset="PINHD-1X4" device="" value="Servo_3"/>
 <part name="GND44" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J14" library="pinhead_ts" deviceset="PINHD-1X4" device="" value="I2C_2"/>
+<part name="J14" library="pinhead_ts" deviceset="PINHD-1X4" device="" value="I2C_0"/>
 <part name="J15" library="pinhead_ts" deviceset="PINHD-1X6" device="" value="SPI_Display"/>
 <part name="GND46" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="supply2_ts" deviceset="+5V" device="" value="+5V"/>
@@ -40077,8 +40077,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <plain>
 <text x="320.294" y="32.766" size="3.048" layer="94">c't-Bot Hauptplatine v2     !!! UNTESTED DRAFT !!!</text>
 <text x="408.178" y="9.906" size="2.54" layer="94" font="vector">0.2</text>
-<text x="81.534" y="182.118" size="1.778" layer="97">Spannungslevel der Analog- / Digitaleingaenge pruefen! 
-Interruptfaehigkeit der Eingaenge pruefen!</text>
+<text x="81.534" y="182.118" size="1.778" layer="97">Interruptfaehigkeit der Eingaenge pruefen!</text>
 <text x="214.63" y="216.408" size="1.778" layer="97">Schaltung checken!
 Widerstandswerte pruefen!</text>
 <text x="365.76" y="101.346" size="1.778" layer="97">/ MIC2981 / TBD62783A</text>
@@ -40672,7 +40671,7 @@ an LEDs anpassen!</text>
 <wire x1="76.2" y1="96.52" x2="53.34" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SDA0" class="0">
+<net name="SDA2" class="0">
 <segment>
 <pinref part="IC7" gate="G$1" pin="SDA"/>
 <wire x1="292.1" y1="124.46" x2="281.94" y2="124.46" width="0.1524" layer="91"/>
@@ -40705,12 +40704,12 @@ an LEDs anpassen!</text>
 <label x="20.32" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="8/PWM/TX3/ALT-SDA0/ALT-MISO0"/>
-<wire x1="76.2" y1="149.86" x2="53.34" y2="149.86" width="0.1524" layer="91"/>
-<label x="55.88" y="149.86" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="4/PWM/SDA2/CAN0RX"/>
+<wire x1="76.2" y1="160.02" x2="53.34" y2="160.02" width="0.1524" layer="91"/>
+<label x="55.88" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SCL0" class="0">
+<net name="SCL2" class="0">
 <segment>
 <pinref part="IC7" gate="G$1" pin="SCL"/>
 <wire x1="292.1" y1="121.92" x2="281.94" y2="121.92" width="0.1524" layer="91"/>
@@ -40741,9 +40740,9 @@ an LEDs anpassen!</text>
 <label x="20.32" y="15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="7/PWM/RX3/ALT-SCL0/ALT-MOSI0"/>
-<wire x1="76.2" y1="152.4" x2="53.34" y2="152.4" width="0.1524" layer="91"/>
-<label x="55.88" y="152.4" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="3/PWM/SCL2/CAN0TX"/>
+<wire x1="76.2" y1="162.56" x2="53.34" y2="162.56" width="0.1524" layer="91"/>
+<label x="55.88" y="162.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="KLAPPE" class="0">
@@ -42345,30 +42344,6 @@ an LEDs anpassen!</text>
 <label x="20.32" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SCL2" class="0">
-<segment>
-<pinref part="J14" gate="A" pin="4"/>
-<wire x1="294.64" y1="40.64" x2="309.88" y2="40.64" width="0.1524" layer="91"/>
-<label x="297.18" y="40.64" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="3/PWM/SCL2/CAN0TX"/>
-<wire x1="76.2" y1="162.56" x2="53.34" y2="162.56" width="0.1524" layer="91"/>
-<label x="55.88" y="162.56" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SDA2" class="0">
-<segment>
-<pinref part="J14" gate="A" pin="3"/>
-<wire x1="294.64" y1="43.18" x2="309.88" y2="43.18" width="0.1524" layer="91"/>
-<label x="297.18" y="43.18" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="4/PWM/SDA2/CAN0RX"/>
-<wire x1="76.2" y1="160.02" x2="53.34" y2="160.02" width="0.1524" layer="91"/>
-<label x="55.88" y="160.02" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="PWM4" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="21/A7/PWM/CS0-3/ALT-MOSI1/ALT-RX1"/>
@@ -43250,6 +43225,30 @@ an LEDs anpassen!</text>
 <wire x1="391.16" y1="152.4" x2="414.02" y2="152.4" width="0.1524" layer="91"/>
 <label x="393.7" y="152.4" size="1.778" layer="95"/>
 <pinref part="J21" gate="A" pin="2"/>
+</segment>
+</net>
+<net name="SCL0" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="7/PWM/RX3/ALT-SCL0/ALT-MOSI0"/>
+<wire x1="76.2" y1="152.4" x2="53.34" y2="152.4" width="0.1524" layer="91"/>
+<label x="55.88" y="152.4" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J14" gate="A" pin="4"/>
+<wire x1="294.64" y1="40.64" x2="309.88" y2="40.64" width="0.1524" layer="91"/>
+<label x="297.18" y="40.64" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SDA0" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="8/PWM/TX3/ALT-SDA0/ALT-MISO0"/>
+<wire x1="76.2" y1="149.86" x2="53.34" y2="149.86" width="0.1524" layer="91"/>
+<label x="55.88" y="149.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J14" gate="A" pin="3"/>
+<wire x1="294.64" y1="43.18" x2="309.88" y2="43.18" width="0.1524" layer="91"/>
+<label x="297.18" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
