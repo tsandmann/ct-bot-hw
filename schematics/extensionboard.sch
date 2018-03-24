@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.3">
+<eagle version="8.7.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -17797,7 +17797,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <sheet>
 <plain>
 <text x="104.394" y="-53.594" size="3.048" layer="94">c't-Bot RPi Extension Board !! UNTESTED DRAFT !!</text>
-<text x="192.278" y="-76.454" size="2.54" layer="94" font="vector">0.2</text>
+<text x="192.278" y="-76.454" size="2.54" layer="94" font="vector">0.3</text>
 <text x="104.394" y="-58.674" size="2.54" layer="94">CC BY-SA 4.0</text>
 </plain>
 <instances>
@@ -18072,16 +18072,16 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="17.78" y1="104.14" x2="22.86" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J7" gate="A" pin="2"/>
-<wire x1="-73.66" y1="-55.88" x2="-99.06" y2="-55.88" width="0.1524" layer="91"/>
 <pinref part="GND44" gate="1" pin="GND"/>
-<wire x1="-99.06" y1="-55.88" x2="-99.06" y2="-63.5" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="-53.34" x2="-99.06" y2="-63.5" width="0.1524" layer="91"/>
+<pinref part="J7" gate="A" pin="1"/>
+<wire x1="-73.66" y1="-53.34" x2="-99.06" y2="-53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J6" gate="A" pin="2"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="-99.06" y1="-27.94" x2="-99.06" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-99.06" y1="-20.32" x2="-73.66" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="-27.94" x2="-99.06" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="J6" gate="A" pin="1"/>
+<wire x1="-73.66" y1="-17.78" x2="-99.06" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J4" gate="A" pin="1"/>
@@ -18461,19 +18461,19 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="RPI_GPIO12" class="0">
 <segment>
-<pinref part="J5" gate="A" pin="5"/>
-<wire x1="-22.86" y1="68.58" x2="-48.26" y2="68.58" width="0.1524" layer="91"/>
-<label x="-45.72" y="68.58" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="156.464" y1="43.18" x2="180.34" y2="43.18" width="0.1524" layer="91"/>
 <label x="162.56" y="43.18" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="GPIO12"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="G$1" pin="A4"/>
-<wire x1="139.7" y1="-15.24" x2="121.92" y2="-15.24" width="0.1524" layer="91"/>
-<label x="124.46" y="-15.24" size="1.778" layer="95"/>
+<pinref part="J5" gate="A" pin="4"/>
+<wire x1="-22.86" y1="71.12" x2="-48.26" y2="71.12" width="0.1524" layer="91"/>
+<label x="-45.72" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="G$1" pin="A3"/>
+<wire x1="139.7" y1="-12.7" x2="121.92" y2="-12.7" width="0.1524" layer="91"/>
+<label x="124.46" y="-12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RPI_GPIO05" class="0">
@@ -18512,19 +18512,19 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="RPI_GPIO13" class="0">
 <segment>
-<pinref part="J5" gate="A" pin="4"/>
-<wire x1="-22.86" y1="71.12" x2="-48.26" y2="71.12" width="0.1524" layer="91"/>
-<label x="-45.72" y="71.12" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="128.524" y1="38.1" x2="104.14" y2="38.1" width="0.1524" layer="91"/>
 <label x="106.68" y="38.1" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="GPIO13"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="G$1" pin="A3"/>
-<wire x1="139.7" y1="-12.7" x2="121.92" y2="-12.7" width="0.1524" layer="91"/>
-<label x="124.46" y="-12.7" size="1.778" layer="95"/>
+<pinref part="J5" gate="A" pin="5"/>
+<wire x1="-22.86" y1="68.58" x2="-48.26" y2="68.58" width="0.1524" layer="91"/>
+<label x="-45.72" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="G$1" pin="A4"/>
+<wire x1="139.7" y1="-15.24" x2="121.92" y2="-15.24" width="0.1524" layer="91"/>
+<label x="124.46" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RPI_MISO1" class="0">
@@ -18685,19 +18685,19 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="PWR_SERVO" class="0">
 <segment>
-<pinref part="J7" gate="A" pin="1"/>
-<wire x1="-73.66" y1="-53.34" x2="-96.52" y2="-53.34" width="0.1524" layer="91"/>
-<label x="-93.98" y="-53.34" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J6" gate="A" pin="1"/>
-<wire x1="-73.66" y1="-17.78" x2="-96.52" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-93.98" y="-17.78" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="J2" gate="1" pin="22"/>
 <wire x1="50.8" y1="81.28" x2="73.66" y2="81.28" width="0.1524" layer="91"/>
 <label x="53.34" y="81.28" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J6" gate="A" pin="2"/>
+<wire x1="-73.66" y1="-20.32" x2="-96.52" y2="-20.32" width="0.1524" layer="91"/>
+<label x="-93.98" y="-20.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J7" gate="A" pin="2"/>
+<wire x1="-73.66" y1="-55.88" x2="-96.52" y2="-55.88" width="0.1524" layer="91"/>
+<label x="-93.98" y="-55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SERVO2_FB" class="0">
@@ -18808,7 +18808,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="J14" gate="A" pin="3"/>
 </segment>
 </net>
-<net name="GPIO13_5V" class="0">
+<net name="GPIO12_5V" class="0">
 <segment>
 <pinref part="IC3" gate="G$1" pin="B3"/>
 <wire x1="170.18" y1="-12.7" x2="195.58" y2="-12.7" width="0.1524" layer="91"/>
@@ -18816,7 +18816,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="J14" gate="A" pin="4"/>
 </segment>
 </net>
-<net name="GPIO12_5V" class="0">
+<net name="GPIO13_5V" class="0">
 <segment>
 <pinref part="IC3" gate="G$1" pin="B4"/>
 <wire x1="170.18" y1="-15.24" x2="195.58" y2="-15.24" width="0.1524" layer="91"/>
