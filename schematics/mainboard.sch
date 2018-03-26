@@ -39944,8 +39944,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J11" library="pinhead_ts" deviceset="PINHD-1X4" device="" value="Servo_3"/>
 <part name="GND44" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J14" library="pinhead_ts" deviceset="PINHD-1X4" device="" value="I2C_0"/>
-<part name="J15" library="pinhead_ts" deviceset="PINHD-1X6" device="" value="SPI_Display"/>
+<part name="J14" library="pinhead_ts" deviceset="PINHD-1X4" device="" value="I2C_0 / Uart_3"/>
+<part name="J15" library="pinhead_ts" deviceset="PINHD-1X6" device="" value="SPI_1"/>
 <part name="GND46" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="supply2_ts" deviceset="+5V" device="" value="+5V"/>
 <part name="J20" library="pinhead_ts" deviceset="PINHD-1X4" device="" value="Erw_PWM"/>
@@ -40067,7 +40067,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="GND63" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1_ts" deviceset="+3V3" device=""/>
 <part name="SUPPLY20" library="supply2_ts" deviceset="+5V" device="" value="+5V"/>
-<part name="J24" library="pinhead_ts" deviceset="PINHD-1X2" device="" value="I2C_3"/>
+<part name="J24" library="pinhead_ts" deviceset="PINHD-1X4" device="" value="I2C_3"/>
+<part name="GND47" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="SUPPLY16" library="supply2_ts" deviceset="+5V" device="" value="+5V"/>
 </parts>
 <sheets>
 <sheet>
@@ -40080,9 +40082,9 @@ Widerstandswerte pruefen!</text>
 <text x="365.76" y="101.346" size="1.778" layer="97">/ MIC2981 / TBD62783A</text>
 <text x="320.294" y="27.686" size="2.54" layer="94">CC BY-SA 4.0</text>
 <text x="395.986" y="48.514" size="1.778" layer="97">(optional)</text>
-<text x="188.468" y="33.02" size="1.778" layer="97">(optional)</text>
+<text x="186.69" y="33.02" size="1.778" layer="97">(optional)</text>
 <text x="20.32" y="139.446" size="1.778" layer="97">(optional)</text>
-<text x="278.13" y="2.286" size="1.778" layer="97">(optional)</text>
+<text x="275.59" y="2.286" size="1.778" layer="97">(optional)</text>
 <text x="66.802" y="196.088" size="1.778" layer="97">(optional)</text>
 <text x="275.844" y="33.02" size="1.778" layer="97">(optional)</text>
 <text x="247.396" y="2.032" size="1.778" layer="97">(optional)</text>
@@ -40106,7 +40108,7 @@ MAUS_CLK als CS fuer neuen Sensor</text>
 an LEDs anpassen!</text>
 <text x="24.638" y="270.51" size="1.778" layer="97">max. 18V Eingangsspannung!</text>
 <text x="407.416" y="165.354" size="1.778" layer="97">(optional)</text>
-<text x="301.498" y="33.528" size="1.778" layer="97">(optional)</text>
+<text x="303.784" y="33.528" size="1.778" layer="97">(optional)</text>
 </plain>
 <instances>
 <instance part="J2" gate="A" x="375.92" y="208.28" smashed="yes">
@@ -40295,7 +40297,7 @@ an LEDs anpassen!</text>
 <instance part="GND45" gate="1" x="205.74" y="35.56"/>
 <instance part="J8" gate="A" x="228.6" y="43.18" smashed="yes">
 <attribute name="NAME" x="222.25" y="51.435" size="1.778" layer="95"/>
-<attribute name="VALUE" x="217.17" y="35.56" size="1.778" layer="96"/>
+<attribute name="VALUE" x="216.408" y="35.56" size="1.778" layer="96"/>
 </instance>
 <instance part="GND11" gate="1" x="396.24" y="99.06"/>
 <instance part="C16" gate="G$1" x="200.66" y="205.74" smashed="yes">
@@ -40313,7 +40315,10 @@ an LEDs anpassen!</text>
 <attribute name="VALUE" x="23.114" y="240.538" size="1.778" layer="96"/>
 </instance>
 <instance part="R33" gate="G$1" x="25.4" y="259.08" rot="MR270"/>
-<instance part="J14" gate="A" x="284.48" y="43.18"/>
+<instance part="J14" gate="A" x="284.48" y="43.18" smashed="yes">
+<attribute name="NAME" x="278.13" y="51.435" size="1.778" layer="95"/>
+<attribute name="VALUE" x="270.002" y="35.56" size="1.778" layer="96"/>
+</instance>
 <instance part="GND46" gate="1" x="264.16" y="35.56"/>
 <instance part="SUPPLY6" gate="+5V" x="276.86" y="58.42"/>
 <instance part="J20" gate="A" x="294.64" y="218.44" smashed="yes">
@@ -40351,7 +40356,10 @@ an LEDs anpassen!</text>
 <attribute name="VALUE" x="163.322" y="155.067" size="1.778" layer="96"/>
 </instance>
 <instance part="C15" gate="G$1" x="177.8" y="157.48"/>
-<instance part="J13" gate="A" x="195.58" y="45.72"/>
+<instance part="J13" gate="A" x="195.58" y="45.72" smashed="yes">
+<attribute name="NAME" x="189.23" y="56.515" size="1.778" layer="95"/>
+<attribute name="VALUE" x="187.452" y="35.56" size="1.778" layer="96"/>
+</instance>
 <instance part="SUPPLY10" gate="+5V" x="185.42" y="58.42"/>
 <instance part="GND3" gate="1" x="172.72" y="35.56"/>
 <instance part="R3" gate="G$1" x="350.52" y="162.56" smashed="yes" rot="R180">
@@ -40540,7 +40548,9 @@ an LEDs anpassen!</text>
 <attribute name="VALUE" x="45.466" y="219.71" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY20" gate="+5V" x="342.9" y="182.88"/>
-<instance part="J24" gate="G$1" x="310.134" y="41.148"/>
+<instance part="J24" gate="A" x="312.674" y="43.688"/>
+<instance part="GND47" gate="1" x="292.1" y="35.56"/>
+<instance part="SUPPLY16" gate="+5V" x="304.8" y="58.42"/>
 </instances>
 <busses>
 </busses>
@@ -41136,6 +41146,12 @@ an LEDs anpassen!</text>
 <pinref part="SUPPLY20" gate="+5V" pin="+5V"/>
 <wire x1="342.9" y1="162.56" x2="342.9" y2="180.34" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="J24" gate="A" pin="2"/>
+<pinref part="SUPPLY16" gate="+5V" pin="+5V"/>
+<wire x1="310.134" y1="46.228" x2="304.8" y2="46.228" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="46.228" x2="304.8" y2="55.88" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -41577,6 +41593,12 @@ an LEDs anpassen!</text>
 <wire x1="327.66" y1="203.2" x2="327.66" y2="210.82" width="0.1524" layer="91"/>
 <pinref part="J1" gate="A" pin="1"/>
 <wire x1="327.66" y1="210.82" x2="335.28" y2="210.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J24" gate="A" pin="1"/>
+<pinref part="GND47" gate="1" pin="GND"/>
+<wire x1="310.134" y1="48.768" x2="292.1" y2="48.768" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="48.768" x2="292.1" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PWR_SERVO" class="0">
@@ -42293,7 +42315,7 @@ an LEDs anpassen!</text>
 <label x="86.36" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="RPI_UART_TX" class="0">
+<net name="RX1" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="27/ALT-RX1/ALT-SCK0"/>
 <wire x1="76.2" y1="101.6" x2="53.34" y2="101.6" width="0.1524" layer="91"/>
@@ -42310,7 +42332,7 @@ an LEDs anpassen!</text>
 <label x="20.32" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="RPI_UART_RX" class="0">
+<net name="TX1" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="26/ALT-PWM/ALT-TX1/ALT-SCL2"/>
 <wire x1="76.2" y1="104.14" x2="53.34" y2="104.14" width="0.1524" layer="91"/>
@@ -42555,9 +42577,9 @@ an LEDs anpassen!</text>
 <label x="149.86" y="127" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J24" gate="G$1" pin="2"/>
-<wire x1="307.594" y1="41.148" x2="292.1" y2="41.148" width="0.1524" layer="91"/>
-<label x="295.148" y="41.402" size="1.778" layer="95"/>
+<label x="297.688" y="41.402" size="1.778" layer="95"/>
+<pinref part="J24" gate="A" pin="4"/>
+<wire x1="310.134" y1="41.148" x2="294.64" y2="41.148" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCL3" class="0">
@@ -42567,9 +42589,9 @@ an LEDs anpassen!</text>
 <label x="149.86" y="129.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J24" gate="G$1" pin="1"/>
-<wire x1="307.594" y1="43.688" x2="292.1" y2="43.688" width="0.1524" layer="91"/>
-<label x="295.148" y="43.942" size="1.778" layer="95"/>
+<label x="297.688" y="43.942" size="1.778" layer="95"/>
+<pinref part="J24" gate="A" pin="3"/>
+<wire x1="310.134" y1="43.688" x2="294.64" y2="43.688" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPIO42" class="0">
@@ -42695,7 +42717,7 @@ an LEDs anpassen!</text>
 <wire x1="353.06" y1="76.2" x2="353.06" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="BLE_TX" class="0">
+<net name="RX5" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="UART_TX"/>
 <wire x1="342.9" y1="81.28" x2="375.92" y2="81.28" width="0.1524" layer="91"/>
@@ -42708,7 +42730,7 @@ an LEDs anpassen!</text>
 <label x="55.88" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="BLE_RX" class="0">
+<net name="TX5" class="0">
 <segment>
 <wire x1="342.9" y1="78.74" x2="375.92" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="UART_RX"/>
@@ -42884,7 +42906,7 @@ an LEDs anpassen!</text>
 <wire x1="388.62" y1="223.52" x2="388.62" y2="226.06" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SCL_5V" class="0">
+<net name="SCL2_5V" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="D"/>
 <pinref part="R58" gate="G$1" pin="1"/>
@@ -42908,7 +42930,7 @@ an LEDs anpassen!</text>
 <label x="20.32" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SDA_5V" class="0">
+<net name="SDA2_5V" class="0">
 <segment>
 <pinref part="J13" gate="A" pin="4"/>
 <wire x1="175.26" y1="45.72" x2="193.04" y2="45.72" width="0.1524" layer="91"/>
