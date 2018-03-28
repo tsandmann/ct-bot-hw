@@ -42630,7 +42630,7 @@ an LEDs anpassen!</text>
 <wire x1="355.6" y1="162.56" x2="375.92" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="RPI_SPI0_CE0" class="0">
+<net name="CS0" class="0">
 <segment>
 <wire x1="73.66" y1="33.02" x2="53.34" y2="33.02" width="0.1524" layer="91"/>
 <label x="55.88" y="33.02" size="1.778" layer="95"/>
@@ -42642,7 +42642,7 @@ an LEDs anpassen!</text>
 <label x="55.88" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="RPI_SCLK0" class="0">
+<net name="SCK0" class="0">
 <segment>
 <wire x1="73.66" y1="35.56" x2="53.34" y2="35.56" width="0.1524" layer="91"/>
 <label x="55.88" y="35.56" size="1.778" layer="95"/>
@@ -42659,7 +42659,7 @@ an LEDs anpassen!</text>
 <label x="86.36" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="RPI_MISO0" class="0">
+<net name="MISO0" class="0">
 <segment>
 <wire x1="73.66" y1="38.1" x2="53.34" y2="38.1" width="0.1524" layer="91"/>
 <label x="55.88" y="38.1" size="1.778" layer="95"/>
@@ -42676,7 +42676,7 @@ an LEDs anpassen!</text>
 <label x="86.36" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="RPI_MOSI0" class="0">
+<net name="MOSI0" class="0">
 <segment>
 <wire x1="73.66" y1="40.64" x2="53.34" y2="40.64" width="0.1524" layer="91"/>
 <label x="55.88" y="40.64" size="1.778" layer="95"/>
