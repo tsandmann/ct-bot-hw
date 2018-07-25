@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.1">
+<eagle version="9.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1984,78 +1984,65 @@ Based on the following sources:
 <class number="0" name="default" width="0.2032" drill="0">
 </class>
 </classes>
-<designrules name="aisler_go_2layer_ts">
-<description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
-&lt;p&gt;
-Die Standard-Design-Rules sind so gewählt, dass sie für 
-die meisten Anwendungen passen. Sollte ihre Platine 
-besondere Anforderungen haben, treffen Sie die erforderlichen
-Einstellungen hier und speichern die Design Rules unter 
-einem neuen Namen ab.</description>
-<description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
-&lt;p&gt;
-The default Design Rules have been set to cover
-a wide range of applications. Your particular design
-may have different requirements, so please make the
-necessary adjustments and save your customized
-design rules under a new name.</description>
+<designrules name="SeeedStudio_2layer_DRU">
+<description language="de">DRU for Seeed Fusion PCBs</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
 <param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
-<param name="mdWireWire" value="0.12mm"/>
-<param name="mdWirePad" value="0.12mm"/>
-<param name="mdWireVia" value="0.12mm"/>
-<param name="mdPadPad" value="0.12mm"/>
-<param name="mdPadVia" value="0.12mm"/>
-<param name="mdViaVia" value="0.32mm"/>
-<param name="mdSmdPad" value="0.1mm"/>
-<param name="mdSmdVia" value="0.1mm"/>
-<param name="mdSmdSmd" value="0.1mm"/>
-<param name="mdViaViaSameLayer" value="8mil"/>
+<param name="mdWireWire" value="6mil"/>
+<param name="mdWirePad" value="6mil"/>
+<param name="mdWireVia" value="6mil"/>
+<param name="mdPadPad" value="6mil"/>
+<param name="mdPadVia" value="6mil"/>
+<param name="mdViaVia" value="6mil"/>
+<param name="mdSmdPad" value="6mil"/>
+<param name="mdSmdVia" value="6mil"/>
+<param name="mdSmdSmd" value="6mil"/>
+<param name="mdViaViaSameLayer" value="6mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="0.3mm"/>
-<param name="mdDrill" value="0.3mm"/>
+<param name="mdCopperDimension" value="40mil"/>
+<param name="mdDrill" value="6mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="0.15mm"/>
-<param name="msDrill" value="0.3mm"/>
-<param name="msMicroVia" value="0.1mm"/>
-<param name="msBlindViaRatio" value="1"/>
-<param name="rvPadTop" value="0.1"/>
-<param name="rvPadInner" value="0.1"/>
-<param name="rvPadBottom" value="0.1"/>
-<param name="rvViaOuter" value="0.1"/>
-<param name="rvViaInner" value="0.1"/>
-<param name="rvMicroViaOuter" value="0.1"/>
-<param name="rvMicroViaInner" value="0.1"/>
-<param name="rlMinPadTop" value="0.25mm"/>
-<param name="rlMaxPadTop" value="100mm"/>
-<param name="rlMinPadInner" value="0.25mm"/>
-<param name="rlMaxPadInner" value="100mm"/>
-<param name="rlMinPadBottom" value="0.25mm"/>
-<param name="rlMaxPadBottom" value="100mm"/>
-<param name="rlMinViaOuter" value="0.05mm"/>
-<param name="rlMaxViaOuter" value="100mm"/>
-<param name="rlMinViaInner" value="0.05mm"/>
-<param name="rlMaxViaInner" value="100mm"/>
-<param name="rlMinMicroViaOuter" value="0.05mm"/>
-<param name="rlMaxMicroViaOuter" value="100mm"/>
-<param name="rlMinMicroViaInner" value="0.05mm"/>
-<param name="rlMaxMicroViaInner" value="100mm"/>
+<param name="msWidth" value="6mil"/>
+<param name="msDrill" value="0.35mm"/>
+<param name="msMicroVia" value="9.99mm"/>
+<param name="msBlindViaRatio" value="0.5"/>
+<param name="rvPadTop" value="0.25"/>
+<param name="rvPadInner" value="0.25"/>
+<param name="rvPadBottom" value="0.25"/>
+<param name="rvViaOuter" value="0.25"/>
+<param name="rvViaInner" value="0.25"/>
+<param name="rvMicroViaOuter" value="0.25"/>
+<param name="rvMicroViaInner" value="0.25"/>
+<param name="rlMinPadTop" value="10mil"/>
+<param name="rlMaxPadTop" value="20mil"/>
+<param name="rlMinPadInner" value="10mil"/>
+<param name="rlMaxPadInner" value="20mil"/>
+<param name="rlMinPadBottom" value="10mil"/>
+<param name="rlMaxPadBottom" value="20mil"/>
+<param name="rlMinViaOuter" value="8mil"/>
+<param name="rlMaxViaOuter" value="20mil"/>
+<param name="rlMinViaInner" value="8mil"/>
+<param name="rlMaxViaInner" value="20mil"/>
+<param name="rlMinMicroViaOuter" value="4mil"/>
+<param name="rlMaxMicroViaOuter" value="20mil"/>
+<param name="rlMinMicroViaInner" value="4mil"/>
+<param name="rlMaxMicroViaInner" value="20mil"/>
 <param name="psTop" value="-1"/>
 <param name="psBottom" value="-1"/>
 <param name="psFirst" value="-1"/>
 <param name="psElongationLong" value="100"/>
 <param name="psElongationOffset" value="100"/>
-<param name="mvStopFrame" value="0"/>
+<param name="mvStopFrame" value="1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="0.01mm"/>
-<param name="mlMaxStopFrame" value="100mm"/>
+<param name="mlMinStopFrame" value="4mil"/>
+<param name="mlMaxStopFrame" value="4mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
 <param name="mlViaStopLimit" value="0mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
-<param name="srMaxRoundness" value="100mm"/>
+<param name="srMaxRoundness" value="0mil"/>
 <param name="slThermalIsolate" value="10mil"/>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
@@ -2064,9 +2051,12 @@ design rules under a new name.</description>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
 <param name="checkStop" value="0"/>
-<param name="checkValues" value="1"/>
+<param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="1"/>
 <param name="useDiameter" value="13"/>
-<param name="maxErrors" value="50"/>
+<param name="maxErrors" value="999999"/>
 </designrules>
 <autorouter>
 <pass name="Default">
@@ -2845,9 +2835,7 @@ design rules under a new name.</description>
 <contactref element="IC1" pad="4"/>
 <contactref element="U2" pad="S"/>
 <contactref element="R1" pad="1"/>
-<wire x1="17.417" y1="15.494" x2="17.61" y2="15.301" width="0.2032" layer="1"/>
 <wire x1="11.176" y1="13.335" x2="9.906" y2="14.605" width="0.2032" layer="1"/>
-<wire x1="17.61" y1="14.943" x2="17.61" y2="15.301" width="0.2032" layer="1"/>
 <wire x1="19.873" y1="15.301" x2="17.61" y2="15.301" width="0.2032" layer="1"/>
 <wire x1="32.512" y1="25.781" x2="32.512" y2="28.321" width="0.2032" layer="16"/>
 <via x="32.512" y="28.321" extent="1-16" drill="0.35"/>
@@ -3450,6 +3438,13 @@ design rules under a new name.</description>
 <contactref element="IC1" pad="VUSB"/>
 </signal>
 </signals>
+<mfgpreviewcolors>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
+<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
+<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
+<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
+</mfgpreviewcolors>
 </board>
 </drawing>
 <compatibility>
