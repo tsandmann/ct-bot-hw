@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.1">
+<eagle version="9.3.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -208,10 +208,10 @@
 <text x="59.563" y="62.357" size="1.27" layer="25" rot="R90">VOL</text>
 <text x="16.637" y="58.293" size="1.27" layer="25" rot="R90">PWM</text>
 <text x="47.752" y="0.889" size="1.27" layer="25" rot="R90">UART5</text>
-<text x="9.525" y="57.15" size="0.762" layer="1" font="vector" ratio="12" rot="R270" align="bottom-right">(c) Timo Sandmann</text>
-<text x="10.922" y="57.15" size="0.7112" layer="1" font="vector" ratio="12" rot="R270" align="bottom-right">CC BY-SA 10/2018</text>
-<text x="6.858" y="65.024" size="0.762" layer="1" font="vector" ratio="12" rot="R270">Teensy Adapter
-Board v2.0</text>
+<text x="9.525" y="57.15" size="0.762" layer="29" font="vector" ratio="12" rot="R270" align="bottom-right">(c) Timo Sandmann</text>
+<text x="10.922" y="57.15" size="0.7112" layer="29" font="vector" ratio="12" rot="R270" align="bottom-right">CC BY-SA 11/2018</text>
+<text x="6.858" y="65.024" size="0.762" layer="29" font="vector" ratio="12" rot="R270">Teensy Adapter
+Board v2.1</text>
 <text x="0.508" y="54.356" size="0.762" layer="25" rot="R270">3V3</text>
 <text x="65.913" y="2.413" size="1.016" layer="25" distance="25" rot="R90">gain
 select</text>
@@ -230,7 +230,7 @@ select</text>
 <text x="0.508" y="9.017" size="0.762" layer="25" rot="R270">MISO</text>
 <text x="0.508" y="6.096" size="0.762" layer="25" rot="R270">SCK</text>
 <text x="0.508" y="3.81" size="0.762" layer="25" rot="R270">POW3</text>
-<hole x="32.893" y="60.198" drill="3"/>
+<hole x="33.401" y="61.087" drill="5"/>
 <text x="34.925" y="56.642" size="1.016" layer="26" rot="MR90">KL02 SWD</text>
 <text x="35.941" y="64.516" size="1.016" layer="26" rot="MR180">DD</text>
 <text x="38.481" y="64.516" size="1.016" layer="26" rot="MR180">DC</text>
@@ -2664,7 +2664,7 @@ http://www.st.com&lt;p&gt;
 <attribute name="SUPPLIER" value="Atmel" x="23.114" y="2.54" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="4.699" y="24.4856" size="2.0828" layer="27" ratio="10" rot="SR90"/>
 </element>
-<element name="J1" library="pinhead_ts" package="1X03" value="RADL" x="18.034" y="20.32" smashed="yes" rot="R270">
+<element name="J1" library="pinhead_ts" package="1X03" value="RADL_SEL" x="18.034" y="20.32" smashed="yes" rot="R270">
 <attribute name="NAME" x="17.4498" y="26.2382" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="14.859" y="24.13" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -2867,7 +2867,7 @@ http://www.st.com&lt;p&gt;
 <attribute name="NAME" x="2.2098" y="39.0652" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="-0.381" y="54.61" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="R29" library="rcl" package="RTRIM64W" value="5K" x="55.245" y="62.103" smashed="yes">
+<element name="R29" library="rcl" package="RTRIM64W" value="5k" x="55.245" y="62.103" smashed="yes">
 <attribute name="NAME" x="55.038" y="57.915" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="59.595" y="57.153" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -2875,39 +2875,39 @@ http://www.st.com&lt;p&gt;
 <attribute name="NAME" x="54.983" y="13.216" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="56.396" y="11.184" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="R30" library="rcl" package="0204V" value="100K" x="64.135" y="25.781" smashed="yes" rot="R270">
+<element name="R30" library="rcl" package="0204V" value="100k" x="64.135" y="25.781" smashed="yes" rot="R270">
 <attribute name="NAME" x="65.3034" y="24.6126" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="61.8236" y="27.9146" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="C11" library="rcl" package="C025-025X050" value="1u" x="64.897" y="9.144" smashed="yes" rot="R270">
+<element name="C11" library="rcl" package="C025-025X050" value="1uF" x="64.897" y="9.144" smashed="yes" rot="R270">
 <attribute name="NAME" x="65.786" y="11.811" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="62.103" y="11.43" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="C10" library="rcl" package="C025-025X050" value="10n" x="56.388" y="9.271" smashed="yes" rot="R270">
+<element name="C10" library="rcl" package="C025-025X050" value="10nF" x="56.388" y="9.271" smashed="yes" rot="R270">
 <attribute name="NAME" x="57.912" y="10.795" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="53.594" y="11.557" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="C4" library="rcl" package="C025-025X050" value="220n" x="52.959" y="30.099" smashed="yes">
+<element name="C4" library="rcl" package="C025-025X050" value="220nF" x="52.959" y="30.099" smashed="yes">
 <attribute name="NAME" x="50.292" y="28.829" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="50.673" y="27.305" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="C3" library="rcl" package="C025-025X050" value="220n" x="58.547" y="30.099" smashed="yes">
+<element name="C3" library="rcl" package="C025-025X050" value="220nF" x="58.547" y="30.099" smashed="yes">
 <attribute name="NAME" x="57.658" y="31.496" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="56.261" y="27.305" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="C9" library="rcl" package="C025-025X050" value="1u" x="60.579" y="27.305" smashed="yes" rot="R180">
+<element name="C9" library="rcl" package="C025-025X050" value="1uF" x="60.579" y="27.305" smashed="yes" rot="R180">
 <attribute name="NAME" x="56.642" y="28.321" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="62.865" y="30.099" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="C6" library="rcl" package="C025-025X050" value="1u" x="53.467" y="9.271" smashed="yes" rot="R270">
+<element name="C6" library="rcl" package="C025-025X050" value="1uF" x="53.467" y="9.271" smashed="yes" rot="R270">
 <attribute name="NAME" x="52.07" y="14.224" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="50.673" y="11.557" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="C5" library="rcl" package="C025-025X050" value="1u" x="54.737" y="25.654" smashed="yes" rot="R90">
+<element name="C5" library="rcl" package="C025-025X050" value="1uF" x="54.737" y="25.654" smashed="yes" rot="R90">
 <attribute name="NAME" x="51.562" y="22.86" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="57.531" y="23.368" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="C8" library="rcl" package="E2,5-6" value="220u" x="55.245" y="3.302" smashed="yes">
+<element name="C8" library="rcl" package="E2,5-6" value="220uF" x="55.245" y="3.302" smashed="yes">
 <attribute name="NAME" x="51.689" y="6.731" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="57.912" y="0.635" size="1.27" layer="27" ratio="10"/>
 </element>
@@ -2927,7 +2927,7 @@ http://www.st.com&lt;p&gt;
 <attribute name="OC_NEWARK" value="56P8249" x="74.803" y="53.34" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="49.403" y="32.004" size="1.27" layer="48" ratio="10"/>
 </element>
-<element name="C7" library="rcl" package="C025-025X050" value="1u" x="51.943" y="25.654" smashed="yes" rot="R90">
+<element name="C7" library="rcl" package="C025-025X050" value="1uF" x="51.943" y="25.654" smashed="yes" rot="R90">
 <attribute name="NAME" x="50.292" y="26.035" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="54.737" y="23.368" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
@@ -2947,9 +2947,9 @@ http://www.st.com&lt;p&gt;
 <attribute name="NAME" x="57.6072" y="52.6288" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="62.357" y="52.324" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="J32" library="pinhead_ts" package="1X02/90" value="SWD_KL02" x="38.354" y="55.88" smashed="yes" rot="MR0">
-<attribute name="NAME" x="33.909" y="52.578" size="1.016" layer="26" ratio="10" rot="MR180"/>
-<attribute name="VALUE" x="33.909" y="52.07" size="1.27" layer="28" rot="MR90"/>
+<element name="J32" library="pinhead_ts" package="1X02/90" value="SWD_KL02" x="38.354" y="54.61" smashed="yes" rot="MR0">
+<attribute name="NAME" x="33.909" y="51.308" size="1.016" layer="26" ratio="10" rot="MR180"/>
+<attribute name="VALUE" x="33.909" y="50.8" size="1.27" layer="28" rot="MR90"/>
 </element>
 </elements>
 <signals>
@@ -3377,9 +3377,7 @@ http://www.st.com&lt;p&gt;
 <contactref element="C8" pad="-"/>
 <polygon width="0.1524" layer="1">
 <vertex x="68.072" y="67.31"/>
-<vertex x="17.018" y="67.31"/>
-<vertex x="17.018" y="56.769"/>
-<vertex x="-0.508" y="56.769"/>
+<vertex x="-1.397" y="67.31"/>
 <vertex x="-0.508" y="-1.27"/>
 <vertex x="68.072" y="-1.27"/>
 </polygon>
@@ -3413,20 +3411,21 @@ http://www.st.com&lt;p&gt;
 <signal name="BPS_3V3">
 <contactref element="IC1" pad="51"/>
 <contactref element="J9" pad="1"/>
-<wire x1="25.146" y1="59.69" x2="24.892" y2="59.69" width="0.2032" layer="1"/>
 <wire x1="39.624" y1="20.32" x2="42.926" y2="20.32" width="0.2032" layer="16"/>
-<wire x1="25.146" y1="59.69" x2="27.559" y2="62.103" width="0.2032" layer="1"/>
-<wire x1="27.559" y1="62.103" x2="37.465" y2="62.103" width="0.2032" layer="1"/>
 <wire x1="40.2816" y1="57.6354" x2="40.132" y2="57.6354" width="0.2032" layer="16"/>
 <via x="40.132" y="57.6354" extent="1-16" drill="0.35"/>
-<wire x1="37.9956" y1="61.5724" x2="37.9956" y2="59.7718" width="0.2032" layer="1"/>
-<wire x1="37.9956" y1="61.5724" x2="37.465" y2="62.103" width="0.2032" layer="1"/>
 <wire x1="41.021" y1="49.149" x2="43.18" y2="46.99" width="0.2032" layer="16"/>
 <wire x1="41.021" y1="49.149" x2="41.021" y2="56.896" width="0.2032" layer="16"/>
 <wire x1="41.021" y1="56.896" x2="40.2816" y2="57.6354" width="0.2032" layer="16"/>
 <wire x1="43.18" y1="20.574" x2="42.926" y2="20.32" width="0.2032" layer="16"/>
 <wire x1="43.18" y1="46.99" x2="43.18" y2="20.574" width="0.2032" layer="16"/>
 <wire x1="40.132" y1="57.6354" x2="37.9956" y2="59.7718" width="0.2032" layer="1"/>
+<wire x1="37.9956" y1="59.7718" x2="37.9956" y2="62.9694" width="0.2032" layer="1"/>
+<wire x1="37.9956" y1="62.9694" x2="36.957" y2="64.008" width="0.2032" layer="1"/>
+<wire x1="36.957" y1="64.008" x2="32.131" y2="64.008" width="0.2032" layer="1"/>
+<wire x1="27.305" y1="62.103" x2="24.892" y2="59.69" width="0.2032" layer="1"/>
+<wire x1="27.305" y1="62.103" x2="30.226" y2="62.103" width="0.2032" layer="1"/>
+<wire x1="30.226" y1="62.103" x2="32.131" y2="64.008" width="0.2032" layer="1"/>
 </signal>
 <signal name="MAUS_CLK">
 <contactref element="IC1" pad="52"/>
@@ -3742,11 +3741,14 @@ http://www.st.com&lt;p&gt;
 <contactref element="R7" pad="1"/>
 <contactref element="R8" pad="1"/>
 <wire x1="18.034" y1="53.34" x2="20.574" y2="53.34" width="0.2032" layer="1"/>
-<wire x1="26.162" y1="49.657" x2="22.479" y2="53.34" width="0.2032" layer="1"/>
+<wire x1="22.479" y1="53.34" x2="26.162" y2="49.657" width="0.2032" layer="1"/>
 <wire x1="22.479" y1="53.34" x2="20.574" y2="53.34" width="0.2032" layer="1"/>
-<wire x1="42.164" y1="50.8" x2="31.623" y2="50.8" width="0.2032" layer="1"/>
-<wire x1="31.623" y1="50.8" x2="30.48" y2="49.657" width="0.2032" layer="1"/>
-<wire x1="30.48" y1="49.657" x2="26.162" y2="49.657" width="0.2032" layer="1"/>
+<wire x1="26.162" y1="49.657" x2="30.48" y2="49.657" width="0.2032" layer="1"/>
+<wire x1="30.48" y1="49.657" x2="31.75" y2="48.387" width="0.2032" layer="1"/>
+<wire x1="41.021" y1="49.657" x2="42.164" y2="50.8" width="0.2032" layer="1"/>
+<wire x1="31.75" y1="48.387" x2="35.052" y2="48.387" width="0.2032" layer="1"/>
+<wire x1="35.052" y1="48.387" x2="36.322" y2="49.657" width="0.2032" layer="1"/>
+<wire x1="36.322" y1="49.657" x2="41.021" y2="49.657" width="0.2032" layer="1"/>
 </signal>
 <signal name="ABSTR_3V3">
 <contactref element="IC1" pad="A10"/>
@@ -4536,20 +4538,22 @@ http://www.st.com&lt;p&gt;
 <wire x1="40.767" y1="56.515" x2="37.338" y2="56.515" width="0.2032" layer="1"/>
 <wire x1="37.338" y1="56.515" x2="37.084" y2="56.261" width="0.2032" layer="1"/>
 <via x="37.084" y="56.261" extent="1-16" drill="0.35"/>
-<wire x1="37.084" y1="56.261" x2="37.084" y2="52.07" width="0.2032" layer="16"/>
+<wire x1="37.084" y1="56.261" x2="37.084" y2="50.8" width="0.2032" layer="16"/>
 <wire x1="57.404" y1="56.388" x2="45.72" y2="56.388" width="0.2032" layer="1"/>
 </signal>
 <signal name="KL02_DC">
 <contactref element="J31" pad="1"/>
 <contactref element="J32" pad="1"/>
-<wire x1="39.624" y1="52.07" x2="42.672" y2="52.07" width="0.2032" layer="1"/>
-<wire x1="43.434" y1="53.975" x2="43.942" y2="54.483" width="0.2032" layer="1"/>
+<wire x1="43.942" y1="54.483" x2="43.434" y2="53.975" width="0.2032" layer="1"/>
 <wire x1="43.942" y1="54.483" x2="52.705" y2="54.483" width="0.2032" layer="1"/>
 <wire x1="52.705" y1="54.483" x2="53.213" y2="53.975" width="0.2032" layer="1"/>
 <wire x1="53.213" y1="53.975" x2="58.801" y2="53.975" width="0.2032" layer="1"/>
 <wire x1="58.801" y1="53.975" x2="59.182" y2="53.594" width="0.2032" layer="1"/>
-<wire x1="42.672" y1="52.07" x2="43.434" y2="52.832" width="0.2032" layer="1"/>
-<wire x1="43.434" y1="52.832" x2="43.434" y2="53.975" width="0.2032" layer="1"/>
+<wire x1="43.434" y1="53.975" x2="43.434" y2="52.705" width="0.2032" layer="1"/>
+<wire x1="43.434" y1="52.705" x2="42.799" y2="52.07" width="0.2032" layer="1"/>
+<wire x1="42.799" y1="52.07" x2="40.386" y2="52.07" width="0.2032" layer="1"/>
+<wire x1="40.386" y1="52.07" x2="39.624" y2="51.308" width="0.2032" layer="1"/>
+<wire x1="39.624" y1="51.308" x2="39.624" y2="50.8" width="0.2032" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
@@ -4560,10 +4564,7 @@ http://www.st.com&lt;p&gt;
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
 <errors>
-<approved hash="3,1,82bebfcebf9b82eb"/>
-<approved hash="3,1,02ab02b5c83ac824"/>
-<approved hash="3,1,b49c7e900637cc3b"/>
-<approved hash="3,1,43cc63c24a796a77"/>
+<approved hash="3,1,1155e1a5e1f11101"/>
 </errors>
 </board>
 </drawing>
