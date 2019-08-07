@@ -4448,7 +4448,7 @@ type 0204, grid 2.5 mm</description>
 <attribute name="SPICEPREFIX" value="R" x="99.7204" y="91.2368" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="-24.9682" y="-6.1468" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="R58" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204V" package3d_urn="urn:adsk.eagle:package:23495/1" value="?" x="24.0356" y="-51.188878125" smashed="yes" rot="R90">
+<element name="R58" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204V" package3d_urn="urn:adsk.eagle:package:23495/1" value="10k" x="24.0356" y="-51.188878125" smashed="yes" rot="R90">
 <attribute name="NAME" x="22.8672" y="-53.322478125" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="SPICEPREFIX" value="R" x="151.0356" y="77.081121875" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="26.347" y="-53.322478125" size="1.27" layer="27" ratio="10" rot="R90"/>
@@ -4763,7 +4763,7 @@ type 0204, grid 2.5 mm</description>
 <attribute name="NAME" x="-9.2964" y="-56.0832" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="-9.2202" y="-61.087" size="1.27" layer="27"/>
 </element>
-<element name="R59" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="?" x="5.2226375" y="-36.56024375" smashed="yes" rot="R270">
+<element name="R59" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="10k" x="5.2226375" y="-36.56024375" smashed="yes" rot="R270">
 <attribute name="NAME" x="6.3910375" y="-34.42664375" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="SPICEPREFIX" value="R" x="5.2226375" y="-36.56024375" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="2.9112375" y="-34.42664375" size="1.27" layer="27" ratio="10" rot="R270"/>

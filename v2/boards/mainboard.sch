@@ -30966,7 +30966,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R32" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/2V" package3d_urn="urn:adsk.eagle:package:23495/1" value="100"/>
 <part name="+3V7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="R58" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/2V" package3d_urn="urn:adsk.eagle:package:23495/1" value="?"/>
+<part name="R58" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/2V" package3d_urn="urn:adsk.eagle:package:23495/1" value="10k"/>
 <part name="R57" library="ct-bot" deviceset="R-TRIMM" device="64W" package3d_urn="urn:adsk.eagle:package:23748/1" value="5k"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device="" value="+5V"/>
@@ -31016,7 +31016,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="GND49" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C28" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="1uF"/>
 <part name="J27" library="ct-bot" deviceset="PINHD-1X2" device="" value="SPEAKER_R"/>
-<part name="R59" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="?"/>
+<part name="R59" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="10k"/>
 <part name="C27" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="470nF"/>
 <part name="IC7" library="ct-bot" deviceset="PCA9634" device="-SO20" package3d_urn="urn:adsk.eagle:package:30246/1" value="PCA9634"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -34388,8 +34388,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="VALUE" x="271.78" y="58.42" size="1.778" layer="96"/>
 </instance>
 <instance part="R58" gate="G$1" x="250.698" y="115.57" smashed="yes" rot="R180">
-<attribute name="NAME" x="252.222" y="118.8974" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="249.174" y="113.792" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="248.158" y="117.3226" size="1.778" layer="95"/>
+<attribute name="VALUE" x="248.158" y="112.522" size="1.778" layer="96"/>
 </instance>
 <instance part="R57" gate="G$1" x="231.14" y="104.14" smashed="yes" rot="MR180">
 <attribute name="NAME" x="223.012" y="106.045" size="1.778" layer="95" rot="MR180"/>
@@ -34432,8 +34432,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="VALUE" x="356.87" y="122.428" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="R59" gate="G$1" x="315.976" y="105.41" smashed="yes" rot="R270">
-<attribute name="NAME" x="317.754" y="106.1466" size="1.778" layer="95"/>
-<attribute name="VALUE" x="318.262" y="103.378" size="1.778" layer="96"/>
+<attribute name="NAME" x="318.008" y="106.1466" size="1.778" layer="95"/>
+<attribute name="VALUE" x="318.008" y="103.378" size="1.778" layer="96"/>
 </instance>
 <instance part="C27" gate="G$1" x="315.976" y="95.504" smashed="yes" rot="MR0">
 <attribute name="NAME" x="322.072" y="95.885" size="1.778" layer="95" rot="MR0"/>
