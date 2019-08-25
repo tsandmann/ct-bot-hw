@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -3017,6 +3017,31 @@ body 3.9 mm/JEDEC MS-012AC</description>
 <rectangle x1="-3.4201" y1="2" x2="-2.9299" y2="3.1001" layer="51"/>
 <rectangle x1="-4.6901" y1="2" x2="-4.1999" y2="3.1001" layer="51"/>
 </package>
+<package name="TSOP324">
+<description>Package drawing for TSOP322xx and TSOP324xx IR Receiver Modules made by Vishay.</description>
+<wire x1="-2.9238" y1="1.2222" x2="-2.9238" y2="0.7" width="0.1524" layer="21"/>
+<wire x1="-2.9238" y1="0.7" x2="-2.9238" y2="-0.7" width="0.1524" layer="51"/>
+<wire x1="-2.9238" y1="-0.7" x2="-2.9238" y2="-2.727" width="0.1524" layer="21"/>
+<wire x1="-2.9238" y1="1.2222" x2="2.9238" y2="1.2222" width="0.1524" layer="21"/>
+<wire x1="-2.9238" y1="-2.727" x2="-2.2968" y2="-2.727" width="0.1524" layer="21"/>
+<wire x1="-2.2968" y1="-2.727" x2="2.2968" y2="-2.727" width="0.1524" layer="21"/>
+<wire x1="2.2968" y1="-2.727" x2="2.9238" y2="-2.727" width="0.1524" layer="21"/>
+<wire x1="2.9238" y1="1.2222" x2="2.9238" y2="0.7" width="0.1524" layer="21"/>
+<wire x1="2.9238" y1="0.7" x2="2.9238" y2="-0.7" width="0.1524" layer="51"/>
+<wire x1="2.9238" y1="-0.7" x2="2.9238" y2="-2.727" width="0.1524" layer="21"/>
+<wire x1="-2.2968" y1="-2.727" x2="2.2968" y2="-2.727" width="0.1524" layer="21" curve="131.929287"/>
+<wire x1="-2.9238" y1="1.2222" x2="2.9238" y2="1.2222" width="0.1524" layer="39"/>
+<wire x1="2.9238" y1="1.2222" x2="2.9238" y2="-2.727" width="0.1524" layer="39"/>
+<wire x1="2.9238" y1="-2.727" x2="2.2968" y2="-2.727" width="0.1524" layer="39"/>
+<wire x1="2.2968" y1="-2.727" x2="-2.2968" y2="-2.727" width="0.1524" layer="39" curve="-131.929287"/>
+<wire x1="-2.2968" y1="-2.727" x2="-2.9238" y2="-2.727" width="0.1524" layer="39"/>
+<wire x1="-2.9238" y1="-2.727" x2="-2.9238" y2="1.2222" width="0.1524" layer="39"/>
+<pad name="1" x="-2.54" y="0" drill="0.8"/>
+<pad name="2" x="0" y="0" drill="0.8"/>
+<pad name="3" x="2.54" y="0" drill="0.8"/>
+<text x="-2.9238" y="4" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="-2.9238" y="2" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="DIL16" urn="urn:adsk.eagle:package:20171/1" locally_modified="yes" type="box" library_version="3">
@@ -4379,6 +4404,17 @@ diameter 2 mm, horizontal, grid 7.62 mm</description>
 <text x="-10.16" y="13.208" size="1.778" layer="95">&gt;NAME</text>
 <text x="-10.16" y="-12.192" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
+<symbol name="TSOP324XX">
+<wire x1="5.08" y1="5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<pin name="GND" x="7.62" y="-2.54" length="middle" direction="sup" rot="R180"/>
+<pin name="OUT" x="7.62" y="2.54" length="middle" direction="out" rot="R180"/>
+<pin name="VS" x="7.62" y="0" length="middle" direction="pwr" rot="R180"/>
+<text x="-3.302" y="5.842" size="1.27" layer="95">&gt;NAME</text>
+<text x="-3.556" y="-7.112" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="AVA_BSS138">
@@ -4779,14 +4815,14 @@ N-Channel Logic Level Enhancement Mode Field Effect Transistor</description>
 <description>IR Receiver Modules for Remote Control Systems
 &lt;br&gt;http://www.vishay.com/ir-receiver-modules/</description>
 <gates>
-<gate name="G$1" symbol="TSOP312XX" x="0" y="0"/>
+<gate name="G$1" symbol="TSOP324XX" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="TSOP348">
 <connects>
-<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="GND" pad="3"/>
 <connect gate="G$1" pin="OUT" pad="1"/>
-<connect gate="G$1" pin="VS" pad="3"/>
+<connect gate="G$1" pin="VS" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6760,6 +6796,26 @@ Source: http://www.microchip.com .. 21653b.pdf</description>
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TSOP324*" prefix="IC">
+<description>IR Receiver Modules for Remote Control Systems
+&lt;br&gt;http://www.vishay.com/ir-receiver-modules/</description>
+<gates>
+<gate name="G$1" symbol="TSOP312XX" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TSOP324">
+<connects>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="OUT" pad="1"/>
+<connect gate="G$1" pin="VS" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+<technology name="36"/>
 </technologies>
 </device>
 </devices>
