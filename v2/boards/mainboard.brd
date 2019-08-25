@@ -9,7 +9,7 @@
 <grid distance="8" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.000123031496" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="1" fill="11" visible="no" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
 <layer number="5" name="Route5" color="19" fill="1" visible="no" active="no"/>
@@ -22,7 +22,7 @@
 <layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="7" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="7" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -1774,31 +1774,6 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.</description>
 <text x="-5.08" y="3.556" size="1.778" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5.08" y="-5.715" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="TSOP348">
-<description>Package drawing for TSOP344xx and TSOP348xx IR Receiver Modules made by Vishay.</description>
-<wire x1="-2.9238" y1="1.2222" x2="-2.9238" y2="0.7" width="0.1524" layer="21"/>
-<wire x1="-2.9238" y1="0.7" x2="-2.9238" y2="-0.7" width="0.1524" layer="51"/>
-<wire x1="-2.9238" y1="-0.7" x2="-2.9238" y2="-2.727" width="0.1524" layer="21"/>
-<wire x1="-2.9238" y1="1.2222" x2="2.9238" y2="1.2222" width="0.1524" layer="21"/>
-<wire x1="-2.9238" y1="-2.727" x2="-2.2968" y2="-2.727" width="0.1524" layer="21"/>
-<wire x1="-2.2968" y1="-2.727" x2="2.2968" y2="-2.727" width="0.1524" layer="21"/>
-<wire x1="2.2968" y1="-2.727" x2="2.9238" y2="-2.727" width="0.1524" layer="21"/>
-<wire x1="2.9238" y1="1.2222" x2="2.9238" y2="0.7" width="0.1524" layer="21"/>
-<wire x1="2.9238" y1="0.7" x2="2.9238" y2="-0.7" width="0.1524" layer="51"/>
-<wire x1="2.9238" y1="-0.7" x2="2.9238" y2="-2.727" width="0.1524" layer="21"/>
-<wire x1="-2.2968" y1="-2.727" x2="2.2968" y2="-2.727" width="0.1524" layer="21" curve="131.929287"/>
-<wire x1="-2.9238" y1="1.2222" x2="2.9238" y2="1.2222" width="0.1524" layer="39"/>
-<wire x1="2.9238" y1="1.2222" x2="2.9238" y2="-2.727" width="0.1524" layer="39"/>
-<wire x1="2.9238" y1="-2.727" x2="2.2968" y2="-2.727" width="0.1524" layer="39"/>
-<wire x1="2.2968" y1="-2.727" x2="-2.2968" y2="-2.727" width="0.1524" layer="39" curve="-131.929287"/>
-<wire x1="-2.2968" y1="-2.727" x2="-2.9238" y2="-2.727" width="0.1524" layer="39"/>
-<wire x1="-2.9238" y1="-2.727" x2="-2.9238" y2="1.2222" width="0.1524" layer="39"/>
-<pad name="1" x="-2.54" y="0" drill="0.8"/>
-<pad name="2" x="0" y="0" drill="0.8"/>
-<pad name="3" x="2.54" y="0" drill="0.8"/>
-<text x="-2.9238" y="4" size="1.27" layer="25" font="vector">&gt;NAME</text>
-<text x="-2.9238" y="2" size="1.27" layer="27" font="vector">&gt;VALUE</text>
-</package>
 <package name="00MM_PTH">
 <description>&lt;h3&gt;20mm (CR2032) Coin Cell Battery Holder - PTH&lt;/h3&gt;
 &lt;p&gt;Basic 20mm coin cell holder. Posts can be inserted into 0.1" perf board! Holds the common CR2032 type batteries.&lt;/p&gt;
@@ -2572,6 +2547,31 @@ body 3.9 mm/JEDEC MS-012AC</description>
 <rectangle x1="-3.4201" y1="2" x2="-2.9299" y2="3.1001" layer="51"/>
 <rectangle x1="-4.6901" y1="2" x2="-4.1999" y2="3.1001" layer="51"/>
 </package>
+<package name="TSOP324">
+<description>Package drawing for TSOP322xx and TSOP324xx IR Receiver Modules made by Vishay.</description>
+<wire x1="-2.9238" y1="1.2222" x2="-2.9238" y2="0.7" width="0.1524" layer="21"/>
+<wire x1="-2.9238" y1="0.7" x2="-2.9238" y2="-0.7" width="0.1524" layer="51"/>
+<wire x1="-2.9238" y1="-0.7" x2="-2.9238" y2="-2.727" width="0.1524" layer="21"/>
+<wire x1="-2.9238" y1="1.2222" x2="2.9238" y2="1.2222" width="0.1524" layer="21"/>
+<wire x1="-2.9238" y1="-2.727" x2="-2.2968" y2="-2.727" width="0.1524" layer="21"/>
+<wire x1="-2.2968" y1="-2.727" x2="2.2968" y2="-2.727" width="0.1524" layer="21"/>
+<wire x1="2.2968" y1="-2.727" x2="2.9238" y2="-2.727" width="0.1524" layer="21"/>
+<wire x1="2.9238" y1="1.2222" x2="2.9238" y2="0.7" width="0.1524" layer="21"/>
+<wire x1="2.9238" y1="0.7" x2="2.9238" y2="-0.7" width="0.1524" layer="51"/>
+<wire x1="2.9238" y1="-0.7" x2="2.9238" y2="-2.727" width="0.1524" layer="21"/>
+<wire x1="-2.2968" y1="-2.727" x2="2.2968" y2="-2.727" width="0.1524" layer="21" curve="131.929287"/>
+<wire x1="-2.9238" y1="1.2222" x2="2.9238" y2="1.2222" width="0.1524" layer="39"/>
+<wire x1="2.9238" y1="1.2222" x2="2.9238" y2="-2.727" width="0.1524" layer="39"/>
+<wire x1="2.9238" y1="-2.727" x2="2.2968" y2="-2.727" width="0.1524" layer="39"/>
+<wire x1="2.2968" y1="-2.727" x2="-2.2968" y2="-2.727" width="0.1524" layer="39" curve="-131.929287"/>
+<wire x1="-2.2968" y1="-2.727" x2="-2.9238" y2="-2.727" width="0.1524" layer="39"/>
+<wire x1="-2.9238" y1="-2.727" x2="-2.9238" y2="1.2222" width="0.1524" layer="39"/>
+<pad name="1" x="-2.54" y="0" drill="0.8"/>
+<pad name="2" x="0" y="0" drill="0.8"/>
+<pad name="3" x="2.54" y="0" drill="0.8"/>
+<text x="-2.9238" y="4" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="-2.9238" y="2" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="RTRIM64W" urn="urn:adsk.eagle:package:23748/1" type="box" library_version="10">
@@ -3218,10 +3218,10 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <attribute name="SPICEPREFIX" value="C" x="85.4075" y="8.255" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="-38.7985" y="-16.891" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="C23" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="470nF" x="18.725228125" y="-48.152" smashed="yes" rot="R270">
-<attribute name="NAME" x="20.249228125" y="-45.866" size="1.27" layer="25" ratio="10" rot="R270"/>
-<attribute name="SPICEPREFIX" value="C" x="-108.274771875" y="-109.112" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="15.931228125" y="-45.866" size="1.27" layer="27" ratio="10" rot="R270"/>
+<element name="C23" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="470nF" x="18.663571875" y="-48.1648" smashed="yes" rot="R90">
+<attribute name="NAME" x="17.139571875" y="-50.4508" size="1.27" layer="25" ratio="10" rot="R90"/>
+<attribute name="SPICEPREFIX" value="C" x="145.663571875" y="12.7952" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="21.457571875" y="-50.4508" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="C24" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="1uF" x="12.2596" y="-37.836" smashed="yes" rot="R90">
 <attribute name="NAME" x="10.7356" y="-40.122" size="1.27" layer="25" ratio="10" rot="R90"/>
@@ -3305,16 +3305,12 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <attribute name="NAME" x="-39.878" y="-16.7005" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="-27.432" y="-16.7005" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="IC10" library="ct-bot" package="TSOP348" value="TSOP34830" x="-48.429875" y="26.404515625" smashed="yes" rot="R270">
-<attribute name="NAME" x="-44.429875" y="29.328315625" size="1.27" layer="25" font="vector" rot="R270"/>
-<attribute name="VALUE" x="-46.429875" y="29.328315625" size="1.27" layer="27" font="vector" rot="R270"/>
-</element>
 <element name="IC2" library="ct-bot" package="TO263-5" value="LM2596S-5.0" x="-29.8196" y="-30.7975" smashed="yes">
 <attribute name="NAME" x="-35.4076" y="-36.3855" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="-22.9616" y="-36.3855" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="IC3" library="ct-bot" package="LD1117SOT-223" value="LD1117A" x="-16.1544" y="-47.4472" smashed="yes" rot="R270"/>
-<element name="IC11" library="ct-bot" package="DRV8835" value="DRV8835" x="12.137334375" y="5.128484375" smashed="yes" rot="R270"/>
+<element name="IC10" library="ct-bot" package="DRV8835" value="DRV8835" x="12.137334375" y="5.128484375" smashed="yes" rot="R270"/>
 <element name="IC4" library="linear" library_urn="urn:adsk.eagle:library:262" package="DIL08" package3d_urn="urn:adsk.eagle:package:16409/2" value="LM393" x="-9.1948" y="-19.812" smashed="yes" rot="R180">
 <attribute name="NAME" x="-3.8608" y="-16.891" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="SPICEPREFIX" value="J" x="-38.4048" y="66.548" size="1.778" layer="27" rot="R180" display="off"/>
@@ -3357,9 +3353,9 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <attribute name="NAME" x="4.0386" y="-50.3682" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="4.1148" y="-55.372" size="1.27" layer="27"/>
 </element>
-<element name="J33" library="ct-bot" package="1X02" value="Erw_analog" x="19.96578125" y="51.12396875" smashed="yes">
-<attribute name="NAME" x="17.34958125" y="52.95276875" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="17.42578125" y="47.94896875" size="1.27" layer="27"/>
+<element name="J33" library="ct-bot" package="1X03" value="Erw_analog" x="-29.74963125" y="37.399946875" smashed="yes" rot="R270">
+<attribute name="NAME" x="-27.92083125" y="40.016146875" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="-32.92463125" y="39.939946875" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="J6" library="ct-bot" package="1X02" value="H-Bridge Mode" x="19.3548" y="9.144" smashed="yes" rot="R270">
 <attribute name="NAME" x="21.1836" y="11.7602" size="1.27" layer="25" ratio="10" rot="R270"/>
@@ -3401,9 +3397,9 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <attribute name="NAME" x="-33.3756" y="28.067" size="1.27" layer="26" ratio="10" rot="MR270"/>
 <attribute name="VALUE" x="-28.3718" y="27.9908" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="J23" library="ct-bot" package="1X02" value="Erw_Servo" x="-28.2448" y="34.8996" smashed="yes" rot="R180">
-<attribute name="NAME" x="-25.6286" y="33.0708" size="1.27" layer="25" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="-25.7048" y="38.0746" size="1.27" layer="27" rot="R180"/>
+<element name="J23" library="ct-bot" package="1X02" value="Erw_Servo" x="-26.162" y="36.1696" smashed="yes" rot="R270">
+<attribute name="NAME" x="-24.3332" y="38.7858" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="-29.337" y="38.7096" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="J21" library="ct-bot" package="1X04" value="Servo_2" x="11.9126" y="12.0396" smashed="yes" rot="R180">
 <attribute name="NAME" x="17.0688" y="10.2108" size="1.27" layer="25" ratio="10" rot="R180"/>
@@ -4121,6 +4117,10 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <attribute name="NAME" x="-2.2352" y="-36.2585" size="1.27" layer="26" ratio="10" rot="MR180"/>
 <attribute name="VALUE" x="-2.2352" y="-29.5275" size="1.27" layer="28" ratio="10" rot="MR180"/>
 </element>
+<element name="IC11" library="ct-bot" package="TSOP324" value="TSOP324" x="-49.3776" y="26.6192" smashed="yes" rot="R270">
+<attribute name="NAME" x="-45.3776" y="29.543" size="1.27" layer="25" font="vector" rot="R270"/>
+<attribute name="VALUE" x="-47.3776" y="29.543" size="1.27" layer="27" font="vector" rot="R270"/>
+</element>
 </elements>
 <signals>
 <signal name="KANTE_R">
@@ -4131,12 +4131,12 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="-22.8092" y1="31.75" x2="38.499015625" y2="-15.113603125" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MOT_R_DIR">
-<contactref element="IC11" pad="BPHASE"/>
+<contactref element="IC10" pad="BPHASE"/>
 <contactref element="IC6" pad="41"/>
 <wire x1="0.0508" y1="24.13" x2="21.027334375" y2="3.858484375" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MOT_L_DIR">
-<contactref element="IC11" pad="APHASE"/>
+<contactref element="IC10" pad="APHASE"/>
 <contactref element="IC6" pad="40"/>
 <wire x1="15.947334375" y1="3.858484375" x2="-2.4892" y2="24.13" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -4163,12 +4163,12 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="45.2628" y1="-20.8788" x2="18.6436" y2="46.99" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MOT_L_PWM">
-<contactref element="IC11" pad="AENBL"/>
+<contactref element="IC10" pad="AENBL"/>
 <contactref element="IC6" pad="35"/>
 <wire x1="18.487334375" y1="3.858484375" x2="12.7508" y2="31.75" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MOT_R_PWM">
-<contactref element="IC11" pad="BENBL"/>
+<contactref element="IC10" pad="BENBL"/>
 <contactref element="IC6" pad="36"/>
 <wire x1="23.567334375" y1="3.858484375" x2="10.2108" y2="31.75" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -4199,18 +4199,17 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="-25.3492" y1="16.51" x2="4.7244" y2="9.4488" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FERNBED">
-<contactref element="IC10" pad="1"/>
 <contactref element="J7" pad="2"/>
-<wire x1="-48.429875" y1="28.944515625" x2="22.7584" y2="10.3632" width="0" layer="19" extent="1-1"/>
+<contactref element="IC11" pad="1"/>
+<wire x1="-49.3776" y1="29.1592" x2="22.7584" y2="10.3632" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+5V" class="1">
 <contactref element="C19" pad="1"/>
-<contactref element="IC11" pad="VCC"/>
+<contactref element="IC10" pad="VCC"/>
 <contactref element="J6" pad="1"/>
 <contactref element="J17" pad="2"/>
 <contactref element="IC6" pad="VIN"/>
 <contactref element="C17" pad="1"/>
-<contactref element="C18" pad="+"/>
 <contactref element="R38" pad="2"/>
 <contactref element="R39" pad="2"/>
 <contactref element="J3" pad="2"/>
@@ -4287,22 +4286,25 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <contactref element="ST3" pad="1"/>
 <contactref element="IC8" pad="16"/>
 <contactref element="ST6" pad="23"/>
+<contactref element="C18" pad="+"/>
 <wire x1="-2.3876" y1="53.594" x2="0.1778" y2="53.7972" width="0" layer="19" extent="1-1"/>
-<wire x1="15.0114" y1="-39.8018" x2="12.2596" y2="-39.106" width="0" layer="19" extent="1-1"/>
-<wire x1="15.0114" y1="-42.3418" x2="15.0114" y2="-39.8018" width="0" layer="19" extent="1-1"/>
+<wire x1="21.705225" y1="-34.170403125" x2="23.9776" y2="-34.5948" width="0" layer="19" extent="1-1"/>
 <wire x1="21.59" y1="-18.923" x2="25.7556" y2="-21.7424" width="0" layer="19" extent="1-1"/>
 <wire x1="21.1582" y1="-39.8018" x2="26.2652" y2="-40.8292" width="0" layer="19" extent="1-1"/>
+<wire x1="12.2596" y1="-39.106" x2="8.66039375" y2="-43.2756" width="0" layer="19" extent="1-1"/>
+<wire x1="15.0114" y1="-39.8018" x2="12.2596" y2="-39.106" width="0" layer="19" extent="1-1"/>
+<wire x1="15.0114" y1="-42.3418" x2="15.0114" y2="-39.8018" width="0" layer="19" extent="1-1"/>
 <wire x1="9.627671875" y1="-15.860115625" x2="5.6388" y2="-10.9728" width="0" layer="19" extent="1-1"/>
 <wire x1="31.6484" y1="-18.923" x2="25.7556" y2="-21.7424" width="0" layer="19" extent="1-1"/>
 <wire x1="31.6484" y1="-16.383" x2="31.6484" y2="-18.923" width="0" layer="19" extent="1-1"/>
 <wire x1="31.6484" y1="-15.113" x2="31.6484" y2="-16.383" width="0" layer="19" extent="1-1"/>
 <wire x1="31.6484" y1="-13.843" x2="31.6484" y2="-15.113" width="0" layer="19" extent="1-1"/>
+<wire x1="21.5392" y1="-46.8884" x2="21.1582" y2="-39.8018" width="0" layer="19" extent="1-1"/>
 <wire x1="0.1778" y1="43.7388" x2="-6.858" y2="39.37" width="0" layer="19" extent="1-1"/>
 <wire x1="2.7178" y1="43.7388" x2="0.1778" y2="43.7388" width="0" layer="19" extent="1-1"/>
 <wire x1="5.2578" y1="43.7388" x2="2.7178" y2="43.7388" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND" class="1">
-<contactref element="IC10" pad="2"/>
 <contactref element="ST1" pad="10"/>
 <contactref element="LED1" pad="K"/>
 <contactref element="C1" pad="-"/>
@@ -4319,10 +4321,8 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <contactref element="IC2" pad="6"/>
 <contactref element="J3" pad="1"/>
 <contactref element="J17" pad="1"/>
-<contactref element="IC6" pad="AGND"/>
-<contactref element="C18" pad="-"/>
-<contactref element="IC11" pad="MGND"/>
-<contactref element="IC11" pad="LGND"/>
+<contactref element="IC10" pad="MGND"/>
+<contactref element="IC10" pad="LGND"/>
 <contactref element="C19" pad="2"/>
 <contactref element="J5" pad="1"/>
 <contactref element="IC6" pad="G0"/>
@@ -4379,15 +4379,9 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <contactref element="U4" pad="S"/>
 <contactref element="C16" pad="2"/>
 <contactref element="D2" pad="1"/>
-<contactref element="R60" pad="3"/>
-<contactref element="C25" pad="2"/>
-<contactref element="C24" pad="2"/>
-<contactref element="C26" pad="2"/>
 <contactref element="C28" pad="2"/>
 <contactref element="C29" pad="-"/>
 <contactref element="IC13" pad="2"/>
-<contactref element="IC13" pad="15"/>
-<contactref element="IC13" pad="11"/>
 <contactref element="IC7" pad="10"/>
 <contactref element="C21" pad="2"/>
 <contactref element="IC7" pad="2"/>
@@ -4503,7 +4497,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="-19.3544" y1="-45.1472" x2="-19.3544" y2="-43.792215625" width="0.8128" layer="1"/>
 <wire x1="-19.814215625" y1="-43.3324" x2="-21.4884" y2="-43.3324" width="0.8128" layer="1"/>
 <wire x1="-19.3544" y1="-43.792215625" x2="-19.814215625" y2="-43.3324" width="0.8128" layer="1"/>
-<polygon width="0.3048" layer="16" rank="2">
+<polygon width="0.3048" layer="16" rank="3">
 <vertex x="3.8608" y="10.7696"/>
 <vertex x="3.8608" y="-60.3504"/>
 <vertex x="-60.3504" y="-60.3504"/>
@@ -4556,31 +4550,23 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <contactref element="SJ1" pad="1"/>
 <contactref element="R5" pad="1"/>
 <contactref element="ST6" pad="24"/>
-<contactref element="IC15" pad="1"/>
 <contactref element="IC17" pad="8"/>
 <contactref element="IC20" pad="9"/>
-<contactref element="IC20" pad="14"/>
-<contactref element="IC18" pad="2"/>
-<contactref element="IC18" pad="7"/>
-<contactref element="IC19" pad="2"/>
-<contactref element="IC19" pad="7"/>
-<contactref element="IC16" pad="2"/>
-<contactref element="IC16" pad="7"/>
-<contactref element="IC16" pad="3"/>
-<contactref element="IC17" pad="2"/>
-<contactref element="IC17" pad="7"/>
-<contactref element="IC17" pad="3"/>
+<contactref element="C18" pad="-"/>
+<contactref element="IC13" pad="15"/>
+<contactref element="C24" pad="2"/>
+<wire x1="-31.4833" y1="2.8575" x2="-30.6832" y2="3.6576" width="1.524" layer="16"/>
+<wire x1="-30.6832" y1="3.6576" x2="-30.6832" y2="6.1184" width="1.524" layer="16"/>
+<contactref element="IC11" pad="3"/>
 <wire x1="6.5278" y1="53.7972" x2="5.2578" y2="53.7972" width="0" layer="19" extent="1-1"/>
 <wire x1="3.9878" y1="53.7972" x2="5.2578" y2="53.7972" width="0" layer="19" extent="1-1"/>
 <wire x1="-2.3876" y1="51.054" x2="3.9878" y2="53.7972" width="0" layer="19" extent="1-1"/>
 <wire x1="15.0114" y1="-37.2618" x2="12.2596" y2="-36.566" width="0" layer="19" extent="1-1"/>
-<wire x1="-30.6832" y1="6.1184" x2="-31.4833" y2="2.8575" width="0" layer="19" extent="16-16"/>
 <wire x1="1.4478" y1="43.7388" x2="-1.657978125" y2="45.4406" width="0" layer="19" extent="1-1"/>
 <wire x1="3.9878" y1="43.7388" x2="1.4478" y2="43.7388" width="0" layer="19" extent="1-1"/>
 <wire x1="31.6484" y1="-7.493" x2="28.647334375" y2="-3.761515625" width="0" layer="19" extent="1-1"/>
 <wire x1="33.5912" y1="-5.715" x2="31.6484" y2="-7.493" width="0" layer="19" extent="1-1"/>
 <wire x1="21.1582" y1="-37.2618" x2="26.2652" y2="-37.2732" width="0" layer="19" extent="1-1"/>
-<wire x1="21.1582" y1="-42.3418" x2="21.1582" y2="-37.2618" width="0" layer="19" extent="1-1"/>
 <wire x1="33.5912" y1="5.715" x2="28.647334375" y2="3.858484375" width="0" layer="19" extent="1-1"/>
 <wire x1="31.6484" y1="-17.653" x2="28.2956" y2="-21.7424" width="0" layer="19" extent="1-1"/>
 <wire x1="51.5912" y1="-9" x2="56.5912" y2="-11.5824" width="0" layer="19" extent="1-1"/>
@@ -4638,12 +4624,12 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 </signal>
 <signal name="MOT_L_1" class="2">
 <contactref element="ST5" pad="1"/>
-<contactref element="IC11" pad="AOUT1"/>
+<contactref element="IC10" pad="AOUT1"/>
 <wire x1="15.947334375" y1="-3.761515625" x2="21.59" y2="26.67" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MOT_R_1" class="2">
 <contactref element="ST4" pad="1"/>
-<contactref element="IC11" pad="BOUT1"/>
+<contactref element="IC10" pad="BOUT1"/>
 <wire x1="21.59" y1="-24.13" x2="21.027334375" y2="-3.761515625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ENC_L">
@@ -4683,7 +4669,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 </polygon>
 </signal>
 <signal name="+6V" class="2">
-<contactref element="IC11" pad="VIN"/>
+<contactref element="IC10" pad="VIN"/>
 <contactref element="J2" pad="3"/>
 <contactref element="L1" pad="2"/>
 <contactref element="R8" pad="1"/>
@@ -4785,7 +4771,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <signal name="A22_DAC1">
 <contactref element="IC6" pad="DAC1"/>
 <contactref element="J33" pad="1"/>
-<wire x1="-2.4892" y1="31.75" x2="18.69578125" y2="51.12396875" width="0" layer="19" extent="1-1"/>
+<wire x1="-29.74963125" y1="39.939946875" x2="-2.4892" y2="31.75" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RX6">
 <contactref element="IC6" pad="47"/>
@@ -4879,7 +4865,6 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <signal name="+3V3" class="1">
 <contactref element="R36" pad="2"/>
 <contactref element="R37" pad="2"/>
-<contactref element="IC10" pad="3"/>
 <contactref element="J2" pad="1"/>
 <contactref element="R55" pad="2"/>
 <contactref element="R10" pad="2"/>
@@ -4935,8 +4920,6 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="-53.3732" y1="21.8724" x2="-55.557446875" y2="19.688153125" width="0.8128" layer="16"/>
 <wire x1="-55.557446875" y1="11.616634375" x2="-54.095409375" y2="10.154596875" width="0.8128" layer="16"/>
 <wire x1="-55.557446875" y1="19.688153125" x2="-55.557446875" y2="11.616634375" width="0.8128" layer="16"/>
-<wire x1="-53.3732" y1="21.8724" x2="-51.381084375" y2="23.864515625" width="0.8128" layer="16"/>
-<wire x1="-51.381084375" y1="23.864515625" x2="-48.429875" y2="23.864515625" width="0.8128" layer="16"/>
 <wire x1="-42.1624" y1="2.0228" x2="-44.51" y2="2.0228" width="0.3048" layer="16"/>
 <wire x1="-45.178853125" y1="1.353946875" x2="-50.4132375" y2="1.353946875" width="0.3048" layer="16"/>
 <wire x1="-44.51" y1="2.0228" x2="-45.178853125" y2="1.353946875" width="0.3048" layer="16"/>
@@ -4959,6 +4942,10 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <contactref element="IC18" pad="6"/>
 <contactref element="IC19" pad="6"/>
 <contactref element="IC16" pad="6"/>
+<contactref element="IC11" pad="2"/>
+<wire x1="-49.3776" y1="26.6192" x2="-51.4096" y2="26.6192" width="0.8128" layer="16"/>
+<wire x1="-53.3732" y1="24.6556" x2="-53.3732" y2="21.8724" width="0.8128" layer="16"/>
+<wire x1="-51.4096" y1="26.6192" x2="-53.3732" y2="24.6556" width="0.8128" layer="16"/>
 <wire x1="-21.9964" y1="-47.4472" x2="-26.0604" y2="-51.2064" width="0" layer="19" extent="1-1"/>
 <wire x1="-2.8032" y1="-38.4302" x2="-12.5476" y2="-43.2054" width="0" layer="19" extent="16-16"/>
 <wire x1="2.413" y1="-32.893" x2="-2.8032" y2="-38.4302" width="0" layer="19" extent="16-16"/>
@@ -4966,7 +4953,6 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="2.413" y1="-19.685" x2="2.413" y2="-26.1874" width="0" layer="19" extent="16-16"/>
 <wire x1="7.4676" y1="-16.256" x2="2.413" y2="-19.685" width="0" layer="19" extent="16-16"/>
 <wire x1="9.5504" y1="-18.1356" x2="7.4676" y2="-16.256" width="0" layer="19" extent="1-1"/>
-<wire x1="2.413" y1="-8.9154" x2="7.4676" y2="-16.256" width="0" layer="19" extent="16-16"/>
 <wire x1="-5.47691875" y1="-28.194" x2="2.413" y2="-26.1874" width="0" layer="19" extent="16-16"/>
 <wire x1="-7.970525" y1="-28.1725" x2="-5.47691875" y2="-28.194" width="0" layer="19" extent="1-1"/>
 <wire x1="-5.3848" y1="-23.622" x2="-5.47691875" y2="-28.194" width="0" layer="19" extent="1-1"/>
@@ -4976,13 +4962,14 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="22.6822" y1="-28.448" x2="17.8054" y2="-26.676528125" width="0" layer="19" extent="1-1"/>
 <wire x1="27.9654" y1="-25.6032" x2="22.6822" y2="-28.448" width="0" layer="19" extent="1-1"/>
 <wire x1="33.1724" y1="-21.9456" x2="27.9654" y2="-25.6032" width="0" layer="19" extent="1-1"/>
+<wire x1="2.413" y1="-8.9154" x2="7.4676" y2="-16.256" width="0" layer="19" extent="16-16"/>
 <wire x1="-8.0264" y1="-8.382" x2="2.413" y2="-8.9154" width="0" layer="19" extent="16-16"/>
 <wire x1="46.5836" y1="-25.9588" x2="33.1724" y2="-21.9456" width="0" layer="19" extent="1-1"/>
 <wire x1="33.528" y1="-38.5572" x2="27.9654" y2="-25.6032" width="0" layer="19" extent="1-1"/>
-<wire x1="2.1844" y1="9.4488" x2="-8.0264" y2="-8.382" width="0" layer="19" extent="1-1"/>
+<wire x1="2.1844" y1="9.4488" x2="2.413" y2="-8.9154" width="0" layer="19" extent="16-16"/>
 <wire x1="2.333075" y1="12.0904" x2="2.1844" y2="9.4488" width="0" layer="19" extent="1-1"/>
 <wire x1="-2.3876" y1="12.0904" x2="2.333075" y2="12.0904" width="0" layer="19" extent="1-1"/>
-<wire x1="-36.4236" y1="43.18" x2="-48.429875" y2="23.864515625" width="0" layer="19" extent="1-1"/>
+<wire x1="-36.4236" y1="43.18" x2="-49.3776" y2="26.6192" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.7772" y1="48.9712" x2="-36.4236" y2="43.18" width="0" layer="19" extent="1-1"/>
 <wire x1="-1.59320625" y1="48.8138" x2="-20.7772" y2="48.9712" width="0" layer="19" extent="1-1"/>
 <wire x1="13.335" y1="49.9872" x2="-1.59320625" y2="48.8138" width="0" layer="19" extent="1-1"/>
@@ -5042,7 +5029,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="-31.6992" y1="19.685" x2="-37.8968" y2="13.5636" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
-<contactref element="IC11" pad="MODE"/>
+<contactref element="IC10" pad="MODE"/>
 <contactref element="J6" pad="2"/>
 <wire x1="13.407334375" y1="3.858484375" x2="19.3548" y2="7.874" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -5117,8 +5104,8 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <contactref element="IC6" pad="DAC0"/>
 <contactref element="J28" pad="1"/>
 <contactref element="J33" pad="2"/>
-<wire x1="0.0508" y1="31.75" x2="21.23578125" y2="51.12396875" width="0" layer="19" extent="1-1"/>
-<wire x1="12.09525625" y1="-49.34169375" x2="0.0508" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="0.0508" y1="31.75" x2="12.09525625" y2="-49.34169375" width="0" layer="19" extent="1-1"/>
+<wire x1="-29.74963125" y1="37.399946875" x2="0.0508" y2="31.75" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
 <contactref element="C4" pad="2"/>
@@ -5176,7 +5163,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <contactref element="J23" pad="1"/>
 <contactref element="J9" pad="6"/>
 <wire x1="-25.3492" y1="31.75" x2="-7.9248" y2="-52.197" width="0" layer="19" extent="1-1"/>
-<wire x1="-26.9748" y1="34.8996" x2="-25.3492" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="-26.162" y1="37.4396" x2="-25.3492" y2="31.75" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SERVO5_PWM">
 <contactref element="IC6" pad="21"/>
@@ -5187,7 +5174,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="-5.3848" y1="-52.197" x2="-5.3848" y2="-55.0672" width="0" layer="19" extent="1-1"/>
 <wire x1="-2.8032" y1="-46.0502" x2="-5.3848" y2="-52.197" width="0" layer="19" extent="16-16"/>
 <wire x1="-27.8892" y1="31.75" x2="-2.8032" y2="-46.0502" width="0" layer="19" extent="16-16"/>
-<wire x1="-29.5148" y1="34.8996" x2="-27.8892" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="-26.162" y1="34.8996" x2="-27.8892" y2="31.75" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SERVO1_FB">
 <contactref element="IC6" pad="22"/>
@@ -5547,12 +5534,12 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <signal name="N$41">
 <contactref element="R61" pad="2"/>
 <contactref element="C23" pad="1"/>
-<wire x1="24.0356" y1="-49.918878125" x2="18.725228125" y2="-46.882" width="0" layer="19" extent="1-1"/>
+<wire x1="24.0356" y1="-49.918878125" x2="18.663571875" y2="-49.4348" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$42">
 <contactref element="R60" pad="2"/>
 <contactref element="C23" pad="2"/>
-<wire x1="15.2654" y1="-32.173" x2="18.725228125" y2="-49.422" width="0" layer="19" extent="1-1"/>
+<wire x1="15.2654" y1="-32.173" x2="18.663571875" y2="-46.8948" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$43">
 <contactref element="IC13" pad="14"/>
@@ -5821,7 +5808,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <contactref element="IC12" pad="6"/>
 </signal>
 <signal name="MOT_R_2">
-<contactref element="IC11" pad="BOUT2"/>
+<contactref element="IC10" pad="BOUT2"/>
 <contactref element="R52" pad="1"/>
 <contactref element="SJ2" pad="1"/>
 <contactref element="IC19" pad="8"/>
@@ -5839,7 +5826,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="23.5712" y1="1.1968" x2="23.5712" y2="0.1524" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="MOT_L_2">
-<contactref element="IC11" pad="AOUT2"/>
+<contactref element="IC10" pad="AOUT2"/>
 <contactref element="R53" pad="1"/>
 <contactref element="SJ3" pad="1"/>
 <contactref element="IC18" pad="8"/>
@@ -5926,6 +5913,95 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <signal name="MCP_CH7">
 <contactref element="IC20" pad="8"/>
 </signal>
+<signal name="AGND" class="1">
+<contactref element="IC13" pad="11"/>
+<contactref element="IC15" pad="1"/>
+<contactref element="IC16" pad="2"/>
+<contactref element="IC16" pad="7"/>
+<contactref element="IC16" pad="3"/>
+<contactref element="IC20" pad="14"/>
+<contactref element="IC18" pad="2"/>
+<contactref element="IC18" pad="7"/>
+<contactref element="IC19" pad="2"/>
+<contactref element="IC19" pad="7"/>
+<contactref element="IC17" pad="2"/>
+<contactref element="IC17" pad="7"/>
+<contactref element="IC17" pad="3"/>
+<contactref element="J33" pad="3"/>
+<contactref element="IC6" pad="AGND"/>
+<polygon width="0.3048" layer="15" rank="5">
+<vertex x="-4.064" y="-59.3344"/>
+<vertex x="-4.064" y="-17.00410625"/>
+<vertex x="3.8608" y="-17.00410625"/>
+<vertex x="3.8608" y="-59.3344"/>
+</polygon>
+<wire x1="-13.1572" y1="-40.8432" x2="-3.2512" y2="-40.8432" width="1.524" layer="15"/>
+<wire x1="-23.5204" y1="-51.2064" x2="-22.6568" y2="-50.3428" width="1.524" layer="15"/>
+<wire x1="-22.6568" y1="-50.3428" x2="-22.59305" y2="-50.3428" width="1.524" layer="15"/>
+<wire x1="-22.59305" y1="-50.3428" x2="-21.6408" y2="-49.39055" width="1.524" layer="15"/>
+<wire x1="-21.6408" y1="-49.39055" x2="-21.6408" y2="-49.3268" width="1.524" layer="15"/>
+<wire x1="-21.6408" y1="-49.3268" x2="-13.1572" y2="-40.8432" width="1.524" layer="15"/>
+<wire x1="-2.8194" y1="-19.685" x2="-2.8194" y2="-20.955" width="0.8128" layer="16"/>
+<wire x1="-2.8194" y1="-20.955" x2="2.413" y2="-20.955" width="0.8128" layer="16"/>
+<via x="-0.2032" y="-20.9296" extent="1-16" drill="0.35"/>
+<wire x1="-2.8194" y1="-10.1854" x2="-0.2032" y2="-10.1854" width="0.8128" layer="16"/>
+<wire x1="-0.2032" y1="-10.1854" x2="2.413" y2="-10.1854" width="0.8128" layer="16"/>
+<wire x1="-0.2032" y1="-10.1854" x2="-0.2032" y2="-20.9296" width="0.8128" layer="16"/>
+<wire x1="-2.8194" y1="-27.4574" x2="2.413" y2="-27.4574" width="0.8128" layer="16"/>
+<via x="-0.2032" y="-27.432" extent="1-16" drill="0.35"/>
+<wire x1="-2.8194" y1="-34.163" x2="2.413" y2="-34.163" width="0.8128" layer="16"/>
+<wire x1="-2.8194" y1="-34.163" x2="-2.8194" y2="-32.893" width="0.8128" layer="16"/>
+<via x="-0.2032" y="-34.1376" extent="1-16" drill="0.35"/>
+<wire x1="-2.8032" y1="-40.9702" x2="-0.42074375" y2="-40.9702" width="0.8128" layer="16"/>
+<wire x1="-0.42074375" y1="-40.9702" x2="-0.419496875" y2="-40.971446875" width="0.8128" layer="16"/>
+<via x="-0.419496875" y="-40.98543125" extent="1-16" drill="0.35"/>
+<wire x1="21.1582" y1="-42.3418" x2="19.48629375" y2="-42.3418" width="0.8128" layer="1"/>
+<wire x1="19.48629375" y1="-42.3418" x2="19.4699125" y2="-42.32541875" width="0.8128" layer="1"/>
+<wire x1="19.4699125" y1="-42.32541875" x2="19.413965625" y2="-42.32541875" width="0.8128" layer="1"/>
+<via x="19.413965625" y="-42.32541875" extent="1-16" drill="0.35"/>
+<contactref element="C25" pad="2"/>
+<contactref element="C26" pad="2"/>
+<contactref element="R60" pad="3"/>
+<polygon width="0.3048" layer="15" rank="5">
+<vertex x="10.5664" y="-51.0032"/>
+<vertex x="10.5664" y="-27.9654"/>
+<vertex x="23.1648" y="-27.9654"/>
+<vertex x="23.1648" y="-51.0032"/>
+</polygon>
+<wire x1="19.413965625" y1="-42.32541875" x2="19.413965625" y2="-30.386765625" width="0.8128" layer="15"/>
+<wire x1="1.4224" y1="-29.0576" x2="-0.2032" y2="-27.432" width="0.8128" layer="15"/>
+<wire x1="19.413965625" y1="-30.386765625" x2="18.0848" y2="-29.0576" width="0.8128" layer="15"/>
+<wire x1="18.0848" y1="-29.0576" x2="1.4224" y2="-29.0576" width="0.8128" layer="15"/>
+<wire x1="-38.0492" y1="31.75" x2="-36.4744" y2="33.3248" width="0.8128" layer="15"/>
+<wire x1="-31.284778125" y1="33.3248" x2="-29.74963125" y2="34.859946875" width="0.8128" layer="15"/>
+<wire x1="-36.4744" y1="33.3248" x2="-31.284778125" y2="33.3248" width="0.8128" layer="15"/>
+<wire x1="-43.2816" y1="26.5176" x2="-43.2816" y2="22.352" width="0.8128" layer="15"/>
+<via x="-43.2816" y="22.352" extent="1-16" drill="0.35"/>
+<wire x1="-43.2816" y1="22.352" x2="-43.2816" y2="12.192" width="0.8128" layer="2"/>
+<wire x1="-38.0492" y1="31.75" x2="-43.2816" y2="26.5176" width="0.8128" layer="15"/>
+<wire x1="-43.2816" y1="12.192" x2="-42.2656" y2="11.176" width="0.8128" layer="2"/>
+<wire x1="-42.2656" y1="11.176" x2="-32.9184" y2="11.176" width="0.8128" layer="2"/>
+<via x="-27.4927" y="6.516278125" extent="1-16" drill="0.35"/>
+<wire x1="-28.2448" y1="6.5024" x2="-32.9184" y2="11.176" width="0.8128" layer="2"/>
+<wire x1="-27.4927" y1="6.516278125" x2="-27.506578125" y2="6.5024" width="0.8128" layer="2"/>
+<wire x1="-27.506578125" y1="6.5024" x2="-28.2448" y2="6.5024" width="0.8128" layer="2"/>
+<polygon width="0.3048" layer="16" rank="3">
+<vertex x="-28.2448" y="7.3152"/>
+<vertex x="-26.6192" y="7.3152"/>
+<vertex x="-26.6192" y="5.8928"/>
+<vertex x="-26.6192" y="5.6896"/>
+<vertex x="-28.2448" y="5.6896"/>
+</polygon>
+<wire x1="-27.4927" y1="6.516278125" x2="-24.0284" y2="3.051978125" width="0.8128" layer="2"/>
+<wire x1="-24.0284" y1="-18.05038125" x2="-22.773828125" y2="-19.304953125" width="0.8128" layer="2"/>
+<wire x1="-1.827846875" y1="-19.304953125" x2="-0.2032" y2="-20.9296" width="0.8128" layer="2"/>
+<wire x1="-24.0284" y1="3.051978125" x2="-24.0284" y2="-18.05038125" width="0.8128" layer="2"/>
+<wire x1="-22.773828125" y1="-19.304953125" x2="-1.827846875" y2="-19.304953125" width="0.8128" layer="2"/>
+<wire x1="-0.419496875" y1="-40.98543125" x2="-0.42074375" y2="-40.9702" width="0" layer="19" extent="16-16"/>
+<wire x1="-2.8194" y1="-19.685" x2="-1.827846875" y2="-19.304953125" width="0" layer="19" extent="2-16"/>
+<wire x1="2.413" y1="-27.4574" x2="1.4224" y2="-29.0576" width="0" layer="19" extent="15-16"/>
+<wire x1="2.413" y1="-34.163" x2="-0.2032" y2="-34.1376" width="0" layer="19" extent="16-16"/>
+</signal>
 </signals>
 <mfgpreviewcolors>
 <mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
@@ -5934,6 +6010,9 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
+<errors>
+<approved hash="20,16,271afd8a798240b5"/>
+</errors>
 </board>
 </drawing>
 <compatibility>
