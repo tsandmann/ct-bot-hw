@@ -29,25 +29,31 @@ module prong(radius, depth, width) {
 
 
 module base() {
+    
     difference() {
         // Sockel Batteriefach
         translate([-20, -33 / 2, 2.5]) cube([77.7, 21 + 2 * 6, 6], center = false);
         // Vertiefung
-        translate([-20, -21 / 2, 2.5 + 4]) cube([77.7, 21, 2], center = false);
+        difference() {
+            translate([-20, -21 / 2, 2.5 + 4]) cube([77.7, 21, 2], center = false);
+            translate([-20 + 2.3, -21 / 2, 2.5 + 4]) cube([2, 21, 2], center = false);
+            translate([-20 + 77.7 - 2 - 2.3, -21 / 2, 2.5 + 4]) cube([2, 21, 2], center = false);
+        }
         
         // Schraubloecher Linensensoren
         translate([5, 12, 0]) cylinder(r = 2.48, h = 6, center = false);
         translate([5, -12, 0]) cylinder(r = 2.48, h = 6, center = false);
         // Kabelschlitz Linensensoren
-        translate([16, -33 / 2, -2.50]) cube([6, 29, 20], center = false);
+        translate([13, -33 / 2, -2.50]) cube([8, 29, 20], center = false);
         
         // Schraubloecher Stuetzrad
-        translate([54, -13.5 / 2, 2.5]) cylinder(r = 3.46 / 2, h = 5 - 2.5, center = false);
-        translate([54, 13.5 / 2, 2.5]) cylinder(r = 3.46 / 2, h = 5 - 2.5, center = false);
+        translate([53, -13.5 / 2, 2.5]) cylinder(r = 3.48 / 2, h = 5 - 2.5, center = false);
+        translate([53, 13.5 / 2, 2.5]) cylinder(r = 3.48 / 2, h = 5 - 2.5, center = false);
     }
 
      // Begrenzung Aussparung Stuetzrad
-    translate([48 - 8, -10, 0]) cube([8, 20, 2.5], center = false);
+    translate([46 - 8, -10, 0]) cube([8, 20, 2.5], center = false);
+    
     difference() {
         linear_extrude(2.5) {
             difference() {
@@ -55,10 +61,12 @@ module base() {
                 
                 // Transportfach
                 translate([-40, 0, 0]) square([40, 50], center = true);
+                // Aussparung Transportfachsensor
+                translate([-21.5, -25, 0]) square([3, 3], center = true);
 
                 // Radschlitze
-                translate([-25, 45, 0]) square([50, 7]);
-                translate([-25, -52, 0]) square([50, 7]);
+                translate([-25, 44, 0]) square([50, 8]);
+                translate([-25, -52, 0]) square([50, 8]);
                 
                 // Schraubloecher Motorhalterungen
                 translate([-14.5, 34.5, 0]) circle(r);
@@ -73,25 +81,14 @@ module base() {
                 // Liniensensoren
                 translate([-7 - 8, -8, 0]) square([8, 16]);
                 // Kabelschlitz Liniensensoren
-                translate([19, 0, 0]) square([6, 25], center = true);
+                translate([17, 0, 0]) square([8, 25], center = true);
                 // Schraubloecher Linensensoren
                 translate([5, 12, 0]) circle(r = 2.48);
                 translate([5, -12, 0]) circle(r = 2.48);
                 
-                // Maussensor
-                //translate([2, -8, 0]) square([32, 16]);
-                //translate([8, -18.9, 0]) square([18, 33.9]);
-                //translate([32, -21.4, 0]) square([14.84, 21.4 + 18.67]);
-                
-                // weitere Bohrungen
-                //translate([-48.48, 28.72, 0]) circle(r);
-                //translate([-48.48, -28.72, 0]) circle(r);
-                //translate([0, 56, 0]) circle(r);
-                //translate([0, -56, 0]) circle(r);
-                
                 // Schraubloecher Stuetzrad
-                translate([54, -13.5 / 2, 0]) circle(3.46 / 2);
-                translate([54, 13.5 / 2, 0]) circle(3.46 / 2);
+                translate([53, -13.5 / 2, 0]) circle(3.48 / 2);
+                translate([53, 13.5 / 2, 0]) circle(3.48 / 2);
                 
                 // Schraubloecher Stuetzen
                 translate([-29.55, 32, 0]) circle(r);
@@ -100,7 +97,7 @@ module base() {
             }
         }
         // Aussparung Stuetzrad
-        translate([54, 0, 0]) cylinder(r = 10, h = 1);
+        translate([53, 0, 0]) cylinder(r = 10, h = 1);
     }
 }
 
@@ -170,7 +167,7 @@ module wheel() {
         union() {
             cylinder(r1 = 25, r2 = 23, h = 2.5);
             translate([0, 0, 2.5]) cylinder(r1 = 23, r2 = 25, h = 2.5);
-            translate([0, 0, 5]) cylinder(r = 5, h = 5);
+            //translate([0, 0, 5]) cylinder(r = 5, h = 5);
 //            for(i = [0 : 30]) {
 //                rotate([0, 0, i * 360 / 30]) {
 //                    translate([0, 23, 5.25]) cube([2.5, 4, 0.5], center = true);
@@ -178,12 +175,32 @@ module wheel() {
 //                }
 //            }
         }
-        for(i = [0 : 6]) {
-            rotate([0, 0, i * 360 / 6]) {
-                translate([0, 15, 0]) cylinder(d = 12, h = 5);
+        for(i = [0 : 8]) {
+            rotate([0, 0, i * 360 / 8]) {
+                translate([0, 17, 0]) cylinder(d = 10, h = 5);
             }
         }
-        cylinder(r = 1.5, h = 10);
+        cylinder(r = 1.6, h = 5);
+        translate([0, 0, 3]) cylinder(r = 9, h = 2);
+
+        // Schraubloecher
+        union() {
+            translate([6.35, 0, 0]) cylinder(r = 1.55, h = 5);
+            translate([6.35, 0, 0]) cylinder(r1 = 2.8, r2 = 1.55, h = 1.8);
+        }
+        union() {
+            translate([-6.35, 0, 0]) cylinder(r = 1.55, h = 5);
+            translate([-6.35, 0, 0]) cylinder(r1 = 2.8, r2 = 1.55, h = 1.8);
+        }
+        union() {
+            translate([0, 6.35, 0]) cylinder(r = 1.55, h = 5);
+            translate([0, 6.35, 0]) cylinder(r1 = 2.8, r2 = 1.55, h = 1.8);
+        }
+        union() {
+            translate([0, -6.35, 0]) cylinder(r = 1.55, h = 5);
+            translate([0, -6.35, 0]) cylinder(r1 = 2.8, r2 = 1.55, h = 1.8);
+        }
+        //translate([1.5, 0, 5 + 1.96]) rotate([0, 90, 0]) cylinder(r = 1.96, h = 3.5);
     }
 }
 
@@ -243,8 +260,8 @@ module ctbot() {
 
 //ctbot();
 
-base();
+//base();
 //motormount();
 //pole();
 //wheel();
-//enc(25, 80, 6);
+//enc(25, 80, 5.8);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.0">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5836,7 +5836,7 @@ DIN A4, landscape with location and doc. field</description>
 <text x="162.814" y="11.176" size="3.048" layer="94">c't-Bot v2 MCU Board
 
 !!! UNTESTED DRAFT !!!</text>
-<text x="217.17" y="20.32" size="2.54" layer="94">Rev. 0.1.0</text>
+<text x="217.17" y="20.32" size="2.54" layer="94">Rev. 0.8.4</text>
 <text x="162.814" y="5.842" size="2.54" layer="94">CC BY-SA 4.0</text>
 </plain>
 <instances>
@@ -6821,9 +6821,7 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="142.24" y1="53.34" x2="119.38" y2="53.34" width="0.1524" layer="91"/>
 <label x="121.92" y="53.34" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="119.38" y1="53.34" x2="114.3" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="50.8" x2="119.38" y2="53.34" width="0.1524" layer="91"/>
-<junction x="119.38" y="53.34"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="A" pin="1"/>
