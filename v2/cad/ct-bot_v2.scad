@@ -12,15 +12,15 @@
 
 $fn = 100;
 m3_hole_rad = 1.6;
+m2_hole_rad = 1.2;
 m3_insert_nut_rad = 3.8 / 2;
 m2_insert_nut_rad = 2.8 / 2;
 
-pole_height = 80;
+pole_height = 70;
 
 
 module prism2(b, d, h, ht, sc) {
-    linear_extrude(height = ht, scale = sc)
-    polygon(points = [[0, 0], [b, -h / 2], [b, h / 2]]);
+    linear_extrude(height = ht, scale = sc) polygon(points = [[0, 0], [b, -h / 2], [b, h / 2]]);
 }
 
 module prong(radius, depth, width) {
@@ -38,55 +38,84 @@ module bms_holder() {
         translate([-1, -1, 15]) cube([10, 3.5, 6], center = false);
 
         translate([9, 10.5, 0]) rotate([180, 90, 0]) {
-            linear_extrude(height = 10)
-            polygon(points = [ [-10, 0], [0, 0], [0, 9]]);
+            linear_extrude(height = 10) polygon(points = [ [-10, 0], [0, 0], [0, 9]]);
         }
+    }
+}
+
+module bms_holder_v2() {
+    difference() {
+        translate([-0.4, 4.5, 10]) {
+            cube([6.4, 1, 7], center = false);
+            translate([0, -6, 5])
+            cube([6.4, 6, 2], center = false);
+            translate([0, 1, 0])
+            cube([6.4, 3, 7], center = false);
+
+        }
+
+        translate([2.8, 1.3, 14.5]) cylinder(d = 3.2, h = 3);
+    }
+    translate([-0.4, 5.5 + 3, 10]) rotate([0, 90, 0]) {
+        linear_extrude(height = 6.4) polygon(points = [ [-7, 0], [0, 0], [0, 3]]);
     }
 }
 
 module battery_case() {
     difference() {
         // Batteriefach
-        translate([-20, -36 / 2, 2.5]) cube([77, 36, 32 + 24], center = false);
+        translate([-20, -36 / 2, 2.5]) cube([77, 36, 32 + 26.5], center = false);
 
         // Aussparungen
         translate([-20 + 1.5, -36 / 2 + 1.5, 2.5 + 24]) cube([77 - 3, 33, 40], center = false);
         translate([-20 - 3 + 77, -36 / 2 + 8 / 2, 2.5 + 24]) cube([4, 28, 10], center = false);
+
+        translate([-20 - 3 + 77 - 4 - 0, -36 / 2 + 8 / 2, 2.5 + 5]) cube([8, 28, 20], center = false);
+        translate([-20 - 3 + 77 - 4 - 0, -36 / 2 + 8 / 2 + 10, 2.5 + 5]) cube([8, 28, 10], center = false);
+        
+        translate([-20 - 3 + 77 - 4 - 0, 36 / 2, 7.5]) rotate([0, 0, 90]) {
+            linear_extrude(height = 6) polygon(points = [ [-32, 0], [0, 0], [0, 8]]);
+        }
         
         // Aussparungen Motoren
         translate([-13 / 2, 36 / 2 - 10, 2.5 + 10.5]) cube([13, 10, 15], center = false);
         translate([-13 / 2, -36 / 2, 2.5 + 10.5]) cube([13, 10, 15], center = false);
         // Kabelschaechte Motoren
         translate([-13 / 2 + 8, 36 / 2 - 10, 2.5 + 20]) cube([13, 4.5, 6], center = false);
-        translate([-13 / 2 + 8, -36 / 2 + 6, 2.5 + 20]) cube([13, 4.5, 6], center = false);
+        translate([-13 / 2 + 8, -36 / 2 + 5.5, 2.5 + 20]) cube([13, 4.5, 6], center = false);
+        
+        // Schraubloecher Liniensensoren
+        translate([5, 12, 0]) cylinder(r = 3.5, h = 30, center = false);
+        translate([5, -12, 0]) cylinder(r = 3.5, h = 30, center = false);
     }
-
-    // Halterungen BMS
-    translate([-14 - 0.8, 36 / 2 - 1.5, 2.5 + 30 + 18]) bms_holder();
-    translate([49, 36 / 2 - 1.5, 2.5 + 30 + 18]) bms_holder();
-    translate([49 + 8, -36 / 2 + 1.5, 2.5 + 30 + 18]) rotate([0, 0, 180]) bms_holder();
-    translate([-14 + 8 - 0.8, -36 / 2 + 1.5, 2.5 + 30 + 18]) rotate([0, 0, 180]) bms_holder();  
+    translate([-20 - 3 + 77 - 4, 5.5 + 12.5, 17.5]) rotate([-90, 0, 180]) {
+        linear_extrude(height = 4) polygon(points = [ [-7, 0], [0, 0], [0, 4]]);
+    }
 }
 
 module base() {
     difference() {
         battery_case();
 
-        // Gewindeeinsaetze Linensensoren
-        translate([5, 12, 0]) cylinder(r = m3_insert_nut_rad, h = 6, center = false);
-        translate([5, -12, 0]) cylinder(r = m3_insert_nut_rad, h = 6, center = false);
+        // Schraubloecher Liniensensoren
+        translate([5, 12, 0]) cylinder(r = m3_hole_rad, h = 2.5, center = false);
+        translate([5, -12, 0]) cylinder(r = m3_hole_rad, h = 2.5, center = false);
 
         // Kabelschlitz Linensensoren
         translate([13, -39 / 2, -2.50]) cube([8, 32, 5 + 22 + 4], center = false);
 
-        // Gewindeeinsaetze Stuetzrad
-        translate([53, -13.5 / 2, 2.5]) cylinder(r = m2_insert_nut_rad, h = 5 - 2.5, center = false);
-        translate([53, 13.5 / 2, 2.5]) cylinder(r = m2_insert_nut_rad, h = 5 - 2.5, center = false);
+        // Schraubloecher Stuetzrad
+        translate([53, -13.5 / 2, 2.5]) cylinder(r = m2_hole_rad, h = 10);
+        translate([53, 13.5 / 2, 2.5]) cylinder(r = m2_hole_rad, h = 10);
+        
+        // Schraubloch BMS-Halter
+        translate([46.5 + 7.5, 36 / 2 + 0.5, 2.5 + 52.5 + 3]) rotate([90, 0, 0]) linear_extrude(2.5) circle(m2_hole_rad);
     }
 
     // Motorhalterungen
     translate([0, 34.5 - 15 / 2, 2.5 + 10.5]) rotate([270, 0, 0]) motormount_v2();
-    translate([0, -34.5 - 15 / 2, 2.5 + 10.5]) rotate([270, 0, 0]) motormount_v2();
+    translate([0, -34.5 + 15 / 2, 2.5 + 10.5]) rotate([270, 0, 180]) motormount_v2();
+        
 
     // Begrenzung Aussparung Stuetzrad
     translate([46 - 8, -10, 0]) cube([8, 20, 2.5], center = false);
@@ -104,12 +133,6 @@ module base() {
                 // Radschlitze
                 translate([-25, 44, 0]) square([50, 8]);
                 translate([-25, -52, 0]) square([50, 8]);
-                
-                // Gewindeeinsaetze Motorhalterungen
-                // translate([-14.5, 34.5, 0]) circle(m3_hole_rad);
-                // translate([14.5, 34.5, 0]) circle(m3_hole_rad);
-                // translate([-14.5, -34.5, 0]) circle(m3_hole_rad);
-                // translate([14.5, -34.5, 0]) circle(m3_hole_rad);
 
                 // Kantensensoren
                 translate([-38.42, 36.42, 0]) square(8, center = true);
@@ -119,13 +142,13 @@ module base() {
                 translate([-7 - 8, -8, 0]) square([8, 16]);
                 // Kabelschlitz Liniensensoren
                 translate([17, 0, 0]) square([8, 25], center = true);
-                // Gewindeeinsaetze Linensensoren
-                translate([5, 12, 0]) circle(r = m3_insert_nut_rad);
-                translate([5, -12, 0]) circle(r = m3_insert_nut_rad);
+                // Gewindeeinsaetze Liniensensoren
+                translate([5, 12, 0]) circle(r = m3_hole_rad);
+                translate([5, -12, 0]) circle(r = m3_hole_rad);
                 
-                // Gewindeeinsaetze Stuetzrad
-                translate([53, -13.5 / 2, 0]) circle(m2_insert_nut_rad);
-                translate([53, 13.5 / 2, 0]) circle(m2_insert_nut_rad);
+                // Schraubloecher Stuetzrad
+                translate([53, -13.5 / 2, 0]) circle(m2_hole_rad);
+                translate([53, 13.5 / 2, 0]) circle(m2_hole_rad);
                 
                 // Schraubloecher Stuetzen
                 translate([-29.55, 32, 0]) circle(m3_hole_rad);
@@ -135,7 +158,30 @@ module base() {
         }
         // Aussparung Stuetzrad
         translate([53, 0, 0]) cylinder(r = 10, h = 1);
+        
+        // Schraubloecher Stuetzrad
+        translate([53, -13.5 / 2, 0]) cylinder(r = m2_hole_rad, h = 4);
+        translate([53, 13.5 / 2, 0]) cylinder(r = m2_hole_rad, h = 4);
+   
+        // Schraubloecher Motorhalterungen
+        translate([0, 34.5 - 15 / 2, 2.5 + 10.5]) rotate([270, 0, 0]) {
+            translate([-9, 14, 7.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 4);
+            translate([9, 14, 7.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 4);
+        }
+        translate([0, -34.5 + 15 / 2, 2.5 + 10.5]) rotate([270, 0, 180]) {
+            translate([-9, 14, 7.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 4);
+            translate([9, 14, 7.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 4);
+        }
     }
+    
+    // Halterungen BMS
+    translate([-19.6, 36 / 2 - 1.5 - 8.5, 2.5 + 25]) rotate([-90, 0, 0]) bms_holder_v2();
+    translate([45, 36 / 2 - 1.5 - 8.5, 2.5 + 25]) rotate([-90, 0, 0]) bms_holder_v2();
+    //translate([46.5, 36 / 2 - 1.5 - 8.5, 2.5 + 52.5]) rotate([-90, -90, 0]) bms_holder_v2();
+    
+    // Halterungen Motorctl-PCB
+    translate([-14, 36 / 2 - 1.5 - 8.5 - 16, 2.5 + 25 + 2]) rotate([-90, 0, 180]) bms_holder_v2();
+    translate([45 + 5.6 - 1, 36 / 2 - 1.5 - 8.5 - 16, 2.5 + 25 + 2]) rotate([-90, 0, 180]) bms_holder_v2();
 }
 
 
@@ -163,7 +209,7 @@ module stand() {
     }
 }
 
-module top() {
+module mainboard() {
     linear_extrude(1.5) {
         difference() {
             circle(60);
@@ -196,6 +242,18 @@ module top() {
             translate([-29.55, -32, 0]) circle(m3_hole_rad);
             translate([38, -38, 0]) circle(m3_hole_rad);
         }
+    }
+}
+
+module bms_345() {
+    difference() {
+        cube([71, 38, 1.5]);
+        
+        // schraubloecher
+        translate([71 - 3.2, 38 - 3.2, -0.5]) cylinder(r = m3_hole_rad, h = 3);
+        translate([3.2, 38 - 3.2, -0.5]) cylinder(r = m3_hole_rad, h = 3);
+        translate([71 - 3.2, 3.2, -0.5]) cylinder(r = m3_hole_rad, h = 3);
+        translate([3.2, 3.2, -0.5]) cylinder(r = m3_hole_rad, h = 3);        
     }
 }
 
@@ -268,10 +326,11 @@ module enc(radius, marks, depth) {
 }
 
 module wheel() {
+    rotate([180, 0, 0]) translate([0, 0, -4])
     difference() {
         union() {
-            cylinder(r1 = 25, r2 = 23, h = 2.5);
-            translate([0, 0, 2.5]) cylinder(r1 = 23, r2 = 25, h = 2.5);
+            cylinder(r1 = 25, r2 = 23, h = 2.0);
+            translate([0, 0, 2.0]) cylinder(r1 = 23, r2 = 25, h = 2.0);
             //translate([0, 0, 5]) cylinder(r = 5, h = 5);
 //            for(i = [0 : 30]) {
 //                rotate([0, 0, i * 360 / 30]) {
@@ -286,7 +345,7 @@ module wheel() {
             }
         }
         cylinder(r = 1.6, h = 5);
-        translate([0, 0, 3]) cylinder(r = 9, h = 2);
+        //translate([0, 0, 3]) cylinder(r = 9, h = 2);
 
         // Schraubloecher
         union() {
@@ -336,10 +395,8 @@ module motormount_v2() {
     translate([0, (15 - 4.5) / 2, 15 / 2 + 1.5]) {
         difference() {
             cube([28, 15 - 4.5, 12], center = true);
-            // translate([-14.5, 5.25, 0]) rotate([90, 0, 0]) cylinder(r = m3_insert_nut_rad, h = 7);
-            // translate([14.5, 5.25, 0]) rotate([90, 0, 0]) cylinder(r = m3_insert_nut_rad, h = 7);
-            translate([-9, 1.75, -1.5]) rotate([90, 0, 0]) cylinder(r = m2_insert_nut_rad, h = 7);
-            translate([9, 1.75, -1.5]) rotate([90, 0, 0]) cylinder(r = m2_insert_nut_rad, h = 7);
+            translate([-9, 6.75, -1.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 13);
+            translate([9, 6.75, -1.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 13);
         }
     }
 }
@@ -362,7 +419,7 @@ module pneu() {
 
 module ctbot() {
     color("silver") translate([0, 0, 0]) base();
-//    color("green") translate([0, 0, pole_height + 2.5]) top();
+    color("green") translate([0, 0, pole_height + 2.5]) mainboard();
     color("silver") translate([-29.55 - 4, 32 - 4, 2.5]) pole_right(pole_height);
     color("silver") translate([-29.55 - 4, -32 - 4, 2.5]) pole_left(pole_height);
     color("silver") translate([38 - 4, -38 - 4, 2.5]) pole_base(pole_height);
@@ -372,7 +429,9 @@ module ctbot() {
     color("black") translate([0, -48.5, 18]) rotate([-90, 0, 0]) pneu();
     //color("silver") translate([0, 41, 19]) rotate([-90, 0, 180]) motormount();
     //color("silver") translate([0, -41, 19]) rotate([-90, 0, 0]) motormount();
-    color("white") translate([54, 0, 0]) rotate([180, 0, 0]) support();
+    //color("white") translate([54, 0, 0]) rotate([180, 0, 0]) support();
+    
+    translate([53, 0, 0]) rotate([180, 0, 90])  import("ball-caster.stl");
     
     translate([0, 33, 18]) rotate([-90, 0, 0]) import("micro-metal-gearmotor-backshaft_fixed.stl");
     difference() {
@@ -384,8 +443,9 @@ module ctbot() {
 //        translate([0, -39.5, 18]) rotate([90, 0, 90]) import("micro_metal_gearmotor_bracket_fixed.stl");
 //        translate([-10, -45, 24.498]) cube([20, 20, 2], center = false);
 //    }
-    
-//    color("green") translate([-15, -38 / 2, pole_height + 2.5 - 13.5]) cube([72, 38, 1.5]);
+
+    color("green") translate([-20, 38 / 2 + 4, 23]) rotate([90, 0, 0]) bms_345();
+    bms_345_top_clip();
 }
 
 module clips() {
@@ -397,9 +457,20 @@ module clips() {
     }
 }
 
-ctbot();
+module bms_345_top_clip() {
+    translate([46.5, 36 / 2 - 1.5 - 8.5, 2.5 + 52.5]) rotate([-90, -90, 0]) {
+        difference() {
+            bms_holder_v2();
+            translate([3, 7.5, 10]) cylinder(r = m2_insert_nut_rad, h = 5, center = false);
+            translate([-0.4, 10.5, 9]) cube([6.4, 2, 6], center = false);
+        }
+    }
+}
 
-//base();
+//ctbot();
+
+base();
+//bms_345_top_clip();
 
 //translate([0, 0, -12])
 //stand();
