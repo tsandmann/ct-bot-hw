@@ -16,7 +16,7 @@ m2_hole_rad = 1.2;
 m3_insert_nut_rad = 3.8 / 2;
 m2_insert_nut_rad = 2.8 / 2;
 
-pole_height = 70;
+pole_height = 75;
 
 
 module prism2(b, d, h, ht, sc) {
@@ -109,7 +109,7 @@ module base() {
         translate([53, 13.5 / 2, 2.5]) cylinder(r = m2_hole_rad, h = 10);
         
         // Schraubloch BMS-Halter
-        translate([46.5 + 7.5, 36 / 2 + 0.5, 2.5 + 52.5 + 3]) rotate([90, 0, 0]) linear_extrude(2.5) circle(m2_hole_rad);
+        //translate([46.5 + 7.5, 36 / 2 + 0.5, 2.5 + 52.5 + 3]) rotate([90, 0, 0]) linear_extrude(2.5) circle(m2_hole_rad);
     }
 
     // Motorhalterungen
@@ -164,11 +164,11 @@ module base() {
         translate([53, 13.5 / 2, 0]) cylinder(r = m2_hole_rad, h = 4);
    
         // Schraubloecher Motorhalterungen
-        translate([0, 34.5 - 15 / 2, 2.5 + 10.5]) rotate([270, 0, 0]) {
+        translate([0, 37.7 - 15 / 2, 2.5 + 10.5]) rotate([270, 0, 0]) {
             translate([-9, 14, 7.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 4);
             translate([9, 14, 7.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 4);
         }
-        translate([0, -34.5 + 15 / 2, 2.5 + 10.5]) rotate([270, 0, 180]) {
+        translate([0, -37.7 + 15 / 2, 2.5 + 10.5]) rotate([270, 0, 180]) {
             translate([-9, 14, 7.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 4);
             translate([9, 14, 7.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 4);
         }
@@ -176,11 +176,11 @@ module base() {
     
     // Halterungen BMS
     translate([-19.6, 36 / 2 - 1.5 - 8.5, 2.5 + 25]) rotate([-90, 0, 0]) bms_holder_v2();
-    translate([45, 36 / 2 - 1.5 - 8.5, 2.5 + 25]) rotate([-90, 0, 0]) bms_holder_v2();
+    translate([44.7, 36 / 2 - 1.5 - 8.5, 2.5 + 25]) rotate([-90, 0, 0]) bms_holder_v2();
     //translate([46.5, 36 / 2 - 1.5 - 8.5, 2.5 + 52.5]) rotate([-90, -90, 0]) bms_holder_v2();
     
     // Halterungen Motorctl-PCB
-    translate([-14, 36 / 2 - 1.5 - 8.5 - 16, 2.5 + 25 + 2]) rotate([-90, 0, 180]) bms_holder_v2();
+    translate([-14 + 1.25, 36 / 2 - 1.5 - 8.5 - 16, 2.5 + 25 + 2]) rotate([-90, 0, 180]) bms_holder_v2();
     translate([45 + 5.6 - 1, 36 / 2 - 1.5 - 8.5 - 16, 2.5 + 25 + 2]) rotate([-90, 0, 180]) bms_holder_v2();
 }
 
@@ -344,10 +344,15 @@ module wheel() {
                 translate([0, 17, 0]) cylinder(d = 10, h = 5);
             }
         }
-        cylinder(r = 1.6, h = 5);
+        difference() {
+            cylinder(r = 1.575, h = 5);
+            translate([1.3, 0, 2])
+            cube([0.6, 3, 4], center = true);
+        }
         //translate([0, 0, 3]) cylinder(r = 9, h = 2);
 
         // Schraubloecher
+/*
         union() {
             translate([6.35, 0, 0]) cylinder(r = 1.55, h = 5);
             translate([6.35, 0, 0]) cylinder(r1 = 2.8, r2 = 1.55, h = 1.8);
@@ -365,6 +370,7 @@ module wheel() {
             translate([0, -6.35, 0]) cylinder(r1 = 2.8, r2 = 1.55, h = 1.8);
         }
         //translate([1.5, 0, 5 + 1.96]) rotate([0, 90, 0]) cylinder(r = 1.96, h = 3.5);
+*/
     }
 }
 
@@ -395,8 +401,8 @@ module motormount_v2() {
     translate([0, (15 - 4.5) / 2, 15 / 2 + 1.5]) {
         difference() {
             cube([28, 15 - 4.5, 12], center = true);
-            translate([-9, 6.75, -1.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 13);
-            translate([9, 6.75, -1.5]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 13);
+            translate([-9, 6.75, 1.7]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 13);
+            translate([9, 6.75, 1.7]) rotate([90, 0, 0]) cylinder(r = m2_hole_rad, h = 13);
         }
     }
 }
@@ -419,33 +425,34 @@ module pneu() {
 
 module ctbot() {
     color("silver") translate([0, 0, 0]) base();
-    color("green") translate([0, 0, pole_height + 2.5]) mainboard();
+//    color("green") translate([0, 0, pole_height + 2.5]) mainboard();
+    color("green") translate([0, 0, pole_height + 2.5]) rotate([0, 0, 180]) import("mainboard.stl");
     color("silver") translate([-29.55 - 4, 32 - 4, 2.5]) pole_right(pole_height);
     color("silver") translate([-29.55 - 4, -32 - 4, 2.5]) pole_left(pole_height);
     color("silver") translate([38 - 4, -38 - 4, 2.5]) pole_base(pole_height);
-    color("white") translate([0, 51, 18]) rotate([90, 0, 0]) wheel();
-    color("white") translate([0, -51, 18]) rotate([-90, 0, 0]) wheel();
+    color("white") translate([0, 51, 18]) rotate([90, 90, 0]) wheel();
+    color("white") translate([0, -51, 18]) rotate([-90, 90, 0]) wheel();
     color("black") translate([0, 48.5, 18]) rotate([90, 0, 0]) pneu();
     color("black") translate([0, -48.5, 18]) rotate([-90, 0, 0]) pneu();
     //color("silver") translate([0, 41, 19]) rotate([-90, 0, 180]) motormount();
     //color("silver") translate([0, -41, 19]) rotate([-90, 0, 0]) motormount();
     //color("white") translate([54, 0, 0]) rotate([180, 0, 0]) support();
     
-    translate([53, 0, 0]) rotate([180, 0, 90])  import("ball-caster.stl");
+    translate([53, 0, 0]) rotate([180, 0, 90]) import("ball-caster.stl");
     
     translate([0, 33, 18]) rotate([-90, 0, 0]) import("micro-metal-gearmotor-backshaft_fixed.stl");
     difference() {
-        translate([0, 39.5, 18]) rotate([90, 0, -90]) import("micro_metal_gearmotor_bracket_fixed.stl");
+        translate([0, 32.8, 18]) rotate([90, 0, 90]) import("micro_metal_gearmotor_bracket_fixed.stl");
         translate([-5, 30, 24.498]) cube([20, 20, 2], center = false);
     }
     translate([0, -33, 18]) rotate([90, 180, 0]) import("micro-metal-gearmotor-backshaft_fixed.stl");
-//    difference() {
-//        translate([0, -39.5, 18]) rotate([90, 0, 90]) import("micro_metal_gearmotor_bracket_fixed.stl");
-//        translate([-10, -45, 24.498]) cube([20, 20, 2], center = false);
-//    }
+    difference() {
+        translate([0, -32.8, 18]) rotate([90, 0, -90]) import("micro_metal_gearmotor_bracket_fixed.stl");
+        translate([-10, -45, 24.498]) cube([20, 20, 2], center = false);
+    }
 
-    color("green") translate([-20, 38 / 2 + 4, 23]) rotate([90, 0, 0]) bms_345();
-    bms_345_top_clip();
+    color("green") translate([-135.2, 23, 118.75]) rotate([90, 0, 0]) import("bms345.stl");
+    color("green") translate([-19.2, - 38 / 2 - 4 + 1.6, 61.1]) rotate([0, 90, -90]) import("motorctrl.stl");
 }
 
 module clips() {
@@ -467,9 +474,9 @@ module bms_345_top_clip() {
     }
 }
 
-//ctbot();
+ctbot();
 
-base();
+//base();
 //bms_345_top_clip();
 
 //translate([0, 0, -12])
@@ -479,10 +486,11 @@ base();
 
 //motormount();
 //motormount_v2();
-//rotate([90, 0, 0])
 //pole_left(pole_height);
-//translate([0, 50, 0]) 
+//translate([0, 30, 0])
 //pole_right(pole_height);
+//translate([0, 15, 0])
+//pole_base(pole_height);
 
 //wheel();
 //enc(25, 80, 5.8);
