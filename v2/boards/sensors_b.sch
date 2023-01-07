@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -745,8 +745,8 @@ In this library the device names are the same as the pin names of the symbols, t
 </classes>
 <parts>
 <part name="JP6" library="ct-bot" deviceset="PINHD-1X6" device=""/>
-<part name="U14" library="ct-bot" deviceset="CNY70" device="DEF" value="LINE_L"/>
-<part name="U15" library="ct-bot" deviceset="CNY70" device="DEF" value="LINE_R"/>
+<part name="U14" library="ct-bot" deviceset="CNY70" device="DEF" value="LINE_R"/>
+<part name="U15" library="ct-bot" deviceset="CNY70" device="DEF" value="LINE_L"/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA5_P" device=""/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
@@ -760,13 +760,13 @@ In this library the device names are the same as the pin names of the symbols, t
 <sheets>
 <sheet>
 <plain>
-<text x="33.274" y="11.176" size="3.048" layer="94">c't-Bot v2 Liniensoren
+<text x="33.274" y="11.176" size="3.048" layer="94">ct-Bot v2 Liniensoren
 
-!!! UNTESTED DRAFT !!!</text>
-<text x="87.63" y="20.32" size="2.54" layer="94">Rev. 0.8.4</text>
-<text x="33.274" y="5.842" size="2.54" layer="94">CC BY-SA 4.0</text>
-<text x="66.548" y="149.352" size="1.778" layer="97">Liniensensor L</text>
-<text x="66.548" y="118.872" size="1.778" layer="97">Liniensensor R</text>
+</text>
+<text x="87.63" y="20.32" size="2.54" layer="94">Rev. 0.9.2</text>
+<text x="33.274" y="5.842" size="2.54" layer="94">Timo Sandmann, CC BY-SA 4.0</text>
+<text x="66.548" y="149.352" size="1.778" layer="97">Liniensensor R</text>
+<text x="66.548" y="118.872" size="1.778" layer="97">Liniensensor L</text>
 </plain>
 <instances>
 <instance part="JP6" gate="A" x="12.7" y="154.94" smashed="yes" rot="MR0">
@@ -816,48 +816,46 @@ In this library the device names are the same as the pin names of the symbols, t
 <busses>
 </busses>
 <nets>
-<net name="LOWSIDE_LINE_L" class="0">
-<segment>
-<pinref part="U14" gate="G$1" pin="C"/>
-<wire x1="63.5" y1="157.48" x2="60.96" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="157.48" x2="60.96" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="JP6" gate="A" pin="2"/>
-<wire x1="60.96" y1="160.02" x2="15.24" y2="160.02" width="0.1524" layer="91"/>
-<label x="20.32" y="160.02" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="LOWSIDE_LINE_R" class="0">
 <segment>
-<pinref part="U15" gate="G$1" pin="C"/>
-<wire x1="63.5" y1="127" x2="55.88" y2="127" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="127" x2="55.88" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="JP6" gate="A" pin="3"/>
-<wire x1="55.88" y1="157.48" x2="15.24" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="U14" gate="G$1" pin="C"/>
 <label x="20.32" y="157.48" size="1.778" layer="95"/>
+<pinref part="JP6" gate="A" pin="3"/>
+<wire x1="63.5" y1="157.48" x2="15.24" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LINE_L" class="0">
+<net name="LOWSIDE_LINE_L" class="0">
+<segment>
+<pinref part="U15" gate="G$1" pin="C"/>
+<wire x1="63.5" y1="127" x2="53.34" y2="127" width="0.1524" layer="91"/>
+<label x="20.32" y="160.02" size="1.778" layer="95"/>
+<wire x1="53.34" y1="127" x2="53.34" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="JP6" gate="A" pin="2"/>
+<wire x1="53.34" y1="160.02" x2="15.24" y2="160.02" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LINE_R" class="0">
 <segment>
 <pinref part="U14" gate="G$1" pin="COL"/>
 <wire x1="81.28" y1="162.56" x2="83.82" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="162.56" x2="83.82" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="147.32" x2="53.34" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="147.32" x2="53.34" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="JP6" gate="A" pin="4"/>
-<wire x1="53.34" y1="154.94" x2="15.24" y2="154.94" width="0.1524" layer="91"/>
-<label x="20.32" y="154.94" size="1.778" layer="95"/>
+<wire x1="83.82" y1="147.32" x2="48.26" y2="147.32" width="0.1524" layer="91"/>
+<label x="20.32" y="152.4" size="1.778" layer="95"/>
+<pinref part="JP6" gate="A" pin="5"/>
+<wire x1="48.26" y1="147.32" x2="48.26" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="152.4" x2="15.24" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LINE_R" class="0">
+<net name="LINE_L" class="0">
 <segment>
 <pinref part="U15" gate="G$1" pin="COL"/>
 <wire x1="81.28" y1="132.08" x2="83.82" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="132.08" x2="83.82" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="144.78" x2="50.8" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="JP6" gate="A" pin="5"/>
-<wire x1="50.8" y1="144.78" x2="50.8" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="152.4" x2="15.24" y2="152.4" width="0.1524" layer="91"/>
-<label x="20.32" y="152.4" size="1.778" layer="95"/>
+<label x="20.32" y="154.94" size="1.778" layer="95"/>
+<wire x1="50.8" y1="144.78" x2="50.8" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="JP6" gate="A" pin="4"/>
+<wire x1="50.8" y1="154.94" x2="15.24" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
